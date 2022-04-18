@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Kitchen.Models
@@ -6,22 +7,31 @@ namespace Kitchen.Models
     public class Dish : Base<Dish>
     {
         public string Name { get; set; }
-        public string Kitchen { get; set; }
-        public string Course { get; set; }
+        public KitchenType Kitchen { get; set; }
+        public CourseType Course { get; set; }
 
         // Словник інгридієнтів у страві
         public List<Ingredient> DishIngredients
         {
-            get
-            {
-                //List<Ingredient> result = new List<Ingredient>();
-                //foreach (var item in Ingredient.Items.Values)
-                //    if (item.Dish == this)
-                //        result.Add(item);
-                //return result;
+            get { return Ingredient.Items.Values.Where(li => li.Dish == this).ToList(); }
+        }
 
-                return Ingredient.Ingredients.Values.Where(li => li.Dish == this).ToList();
-            }
+        // Ініціалізатор властивості для вмісту страв у кухні
+        private Guid _kitchenId;
+
+        public KitchenType KitchenType
+        {
+            get { return KitchenType.Items[_kitchenId]; }
+            set { _kitchenId = value.Id; }
+        }
+
+        // Ініціалізатор властивості для вмісту страв у прийомах їжі
+        private Guid _courseId;
+
+        public CourseType CourseType
+        {
+            get { return CourseType.Items[_courseId]; }
+            set { _courseId = value.Id; }
         }
 
         public override string ToString()
@@ -30,7 +40,7 @@ namespace Kitchen.Models
         }
 
         // Конструктор класа
-        public Dish(string name, string kitchen, string course)
+        public Dish(string name, KitchenType kitchen, CourseType course)
         {
             Name = name;
             Kitchen = kitchen;

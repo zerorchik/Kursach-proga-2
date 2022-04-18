@@ -7,11 +7,12 @@ namespace Kitchen.Models
         public string Name { get; set; }
         public string Count { get; set; }
 
+        // Ініціалізатор властивості для вмісту інгредієнтів у страві
         private Guid _dishId;
 
         public Dish Dish
         {
-            get { return Dish.Ingredients[_dishId]; }
+            get { return Dish.Items[_dishId]; }
             set { _dishId = value.Id; }
         }
 
