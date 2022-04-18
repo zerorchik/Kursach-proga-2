@@ -2,7 +2,7 @@
 
 namespace Kitchen.Models
 {
-    public class Ingredient : Base
+    public class Ingredient : Base<Ingredient>
     {
         public string Name { get; set; }
         public string Count { get; set; }
@@ -11,13 +11,13 @@ namespace Kitchen.Models
 
         public Dish Dish
         {
-            get { return (Dish)Ingredients[_dishId]; }
+            get { return Dish.Ingredients[_dishId]; }
             set { _dishId = value.Id; }
         }
 
         public override string ToString()
         {
-            return Name + " (" + Count + ")";
+            return "* " + Name + " - " + Count;
         }
     }
 }

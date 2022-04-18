@@ -1,6 +1,6 @@
 ﻿namespace Kitchen.Models
 {
-    public class Course : Base
+    public class Course : Base<Course>
     {
         public string Name { get; set; }
 

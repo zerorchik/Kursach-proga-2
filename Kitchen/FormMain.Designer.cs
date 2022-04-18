@@ -35,7 +35,7 @@ namespace Kitchen
             // labelDish
             // 
             this.labelDish.AutoSize = true;
-            this.labelDish.Location = new System.Drawing.Point(376, 72);
+            this.labelDish.Location = new System.Drawing.Point(383, 72);
             this.labelDish.Name = "labelDish";
             this.labelDish.Size = new System.Drawing.Size(49, 15);
             this.labelDish.TabIndex = 1;
@@ -44,7 +44,7 @@ namespace Kitchen
             // labelKitchen
             // 
             this.labelKitchen.AutoSize = true;
-            this.labelKitchen.Location = new System.Drawing.Point(24, 72);
+            this.labelKitchen.Location = new System.Drawing.Point(31, 72);
             this.labelKitchen.Name = "labelKitchen";
             this.labelKitchen.Size = new System.Drawing.Size(113, 15);
             this.labelKitchen.TabIndex = 3;
@@ -53,7 +53,7 @@ namespace Kitchen
             // cbKitchen
             // 
             this.cbKitchen.FormattingEnabled = true;
-            this.cbKitchen.Location = new System.Drawing.Point(190, 111);
+            this.cbKitchen.Location = new System.Drawing.Point(208, 111);
             this.cbKitchen.Name = "cbKitchen";
             this.cbKitchen.Size = new System.Drawing.Size(149, 23);
             this.cbKitchen.TabIndex = 2;
@@ -61,7 +61,7 @@ namespace Kitchen
             // labelCourse
             // 
             this.labelCourse.AutoSize = true;
-            this.labelCourse.Location = new System.Drawing.Point(190, 72);
+            this.labelCourse.Location = new System.Drawing.Point(208, 72);
             this.labelCourse.Name = "labelCourse";
             this.labelCourse.Size = new System.Drawing.Size(69, 15);
             this.labelCourse.TabIndex = 5;
@@ -70,24 +70,24 @@ namespace Kitchen
             // cbCourse
             // 
             this.cbCourse.FormattingEnabled = true;
-            this.cbCourse.Location = new System.Drawing.Point(24, 111);
+            this.cbCourse.Location = new System.Drawing.Point(31, 111);
             this.cbCourse.Name = "cbCourse";
-            this.cbCourse.Size = new System.Drawing.Size(121, 23);
+            this.cbCourse.Size = new System.Drawing.Size(149, 23);
             this.cbCourse.TabIndex = 4;
             // 
             // lbIngredients
             // 
             this.lbIngredients.FormattingEnabled = true;
             this.lbIngredients.ItemHeight = 15;
-            this.lbIngredients.Location = new System.Drawing.Point(536, 111);
+            this.lbIngredients.Location = new System.Drawing.Point(543, 111);
             this.lbIngredients.Name = "lbIngredients";
-            this.lbIngredients.Size = new System.Drawing.Size(120, 94);
+            this.lbIngredients.Size = new System.Drawing.Size(223, 289);
             this.lbIngredients.TabIndex = 6;
             // 
             // labelIngredients
             // 
             this.labelIngredients.AutoSize = true;
-            this.labelIngredients.Location = new System.Drawing.Point(536, 72);
+            this.labelIngredients.Location = new System.Drawing.Point(543, 72);
             this.labelIngredients.Name = "labelIngredients";
             this.labelIngredients.Size = new System.Drawing.Size(72, 15);
             this.labelIngredients.TabIndex = 7;
@@ -97,10 +97,11 @@ namespace Kitchen
             // 
             this.lbDish.FormattingEnabled = true;
             this.lbDish.ItemHeight = 15;
-            this.lbDish.Location = new System.Drawing.Point(376, 111);
+            this.lbDish.Location = new System.Drawing.Point(383, 111);
             this.lbDish.Name = "lbDish";
-            this.lbDish.Size = new System.Drawing.Size(120, 94);
+            this.lbDish.Size = new System.Drawing.Size(136, 289);
             this.lbDish.TabIndex = 8;
+            this.lbDish.SelectedIndexChanged += new System.EventHandler(this.lbDish_SelectedIndexChanged);
             // 
             // FormMain
             // 
