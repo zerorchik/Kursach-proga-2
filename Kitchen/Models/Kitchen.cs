@@ -18,11 +18,11 @@ namespace Kitchen.Models
             return Name + " кухня";
         }
 
-        // Конструктор класа
-        public KitchenType(string name)
-        {
-            Name = name;
-        }
+        //// Конструктор класа
+        //public KitchenType(string name)
+        //{
+        //    Name = name;
+        //}
     }
 
 }

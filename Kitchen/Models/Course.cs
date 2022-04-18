@@ -8,7 +8,7 @@ namespace Kitchen.Models
         public string Name { get; set; }
 
         // Словник страв у прийомах їжі
-        public List<Dish> KitchenDishes
+        public List<Dish> CourseDishes
         {
             get { return Dish.Items.Values.Where(li => li.CourseType == this).ToList(); }
         }
@@ -18,10 +18,10 @@ namespace Kitchen.Models
             return Name;
         }
 
-        // Конструктор класа
-        public CourseType(string name)
-        {
-            Name = name;
-        }
+        //// Конструктор класа
+        //public CourseType(string name)
+        //{
+        //    Name = name;
+        //}
     }
 }
