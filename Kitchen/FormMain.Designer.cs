@@ -124,9 +124,9 @@ namespace Kitchen
             // 
             // btnAddDish
             // 
-            this.btnAddDish.Location = new System.Drawing.Point(30, 475);
+            this.btnAddDish.Location = new System.Drawing.Point(382, 475);
             this.btnAddDish.Name = "btnAddDish";
-            this.btnAddDish.Size = new System.Drawing.Size(520, 37);
+            this.btnAddDish.Size = new System.Drawing.Size(168, 37);
             this.btnAddDish.TabIndex = 9;
             this.btnAddDish.Text = "Додати";
             this.btnAddDish.UseVisualStyleBackColor = true;
@@ -140,9 +140,9 @@ namespace Kitchen
             // 
             // btnEditDish
             // 
-            this.btnEditDish.Location = new System.Drawing.Point(30, 526);
+            this.btnEditDish.Location = new System.Drawing.Point(382, 526);
             this.btnEditDish.Name = "btnEditDish";
-            this.btnEditDish.Size = new System.Drawing.Size(520, 37);
+            this.btnEditDish.Size = new System.Drawing.Size(168, 37);
             this.btnEditDish.TabIndex = 11;
             this.btnEditDish.Text = "Редагувати";
             this.btnEditDish.UseVisualStyleBackColor = true;
@@ -150,9 +150,9 @@ namespace Kitchen
             // 
             // btnRemoveDish
             // 
-            this.btnRemoveDish.Location = new System.Drawing.Point(30, 576);
+            this.btnRemoveDish.Location = new System.Drawing.Point(382, 576);
             this.btnRemoveDish.Name = "btnRemoveDish";
-            this.btnRemoveDish.Size = new System.Drawing.Size(520, 38);
+            this.btnRemoveDish.Size = new System.Drawing.Size(168, 38);
             this.btnRemoveDish.TabIndex = 12;
             this.btnRemoveDish.Text = "Видалити";
             this.btnRemoveDish.UseVisualStyleBackColor = true;
@@ -172,7 +172,6 @@ namespace Kitchen
             this.btnAddIngredient.TabIndex = 14;
             this.btnAddIngredient.Text = "Додати";
             this.btnAddIngredient.UseVisualStyleBackColor = true;
-            this.btnAddIngredient.Click += new System.EventHandler(this.btnAddIngredient_Click);
             // 
             // btnEditIngredient
             // 
@@ -182,6 +181,7 @@ namespace Kitchen
             this.btnEditIngredient.TabIndex = 15;
             this.btnEditIngredient.Text = "Редагувати";
             this.btnEditIngredient.UseVisualStyleBackColor = true;
+            this.btnEditIngredient.Click += new System.EventHandler(this.btnEditIngredient_Click);
             // 
             // btnRemoveIngredient
             // 
@@ -231,9 +231,9 @@ namespace Kitchen
             this.labelChooseKitchen.AutoSize = true;
             this.labelChooseKitchen.Location = new System.Drawing.Point(30, 408);
             this.labelChooseKitchen.Name = "labelChooseKitchen";
-            this.labelChooseKitchen.Size = new System.Drawing.Size(91, 15);
+            this.labelChooseKitchen.Size = new System.Drawing.Size(137, 15);
             this.labelChooseKitchen.TabIndex = 22;
-            this.labelChooseKitchen.Text = "Оберіть кухню:";
+            this.labelChooseKitchen.Text = "Кухня обраного блюда:";
             // 
             // cbDishKitchen
             // 
@@ -256,9 +256,9 @@ namespace Kitchen
             this.labelChooseCourse.AutoSize = true;
             this.labelChooseCourse.Location = new System.Drawing.Point(207, 408);
             this.labelChooseCourse.Name = "labelChooseCourse";
-            this.labelChooseCourse.Size = new System.Drawing.Size(114, 15);
+            this.labelChooseCourse.Size = new System.Drawing.Size(125, 15);
             this.labelChooseCourse.TabIndex = 24;
-            this.labelChooseCourse.Text = "Оберіть тип блюда:";
+            this.labelChooseCourse.Text = "Тип обраного блюда:";
             // 
             // FormMain
             // 

@@ -94,10 +94,10 @@ namespace Kitchen
                 tbDishName.Text = ((Dish)lbDish.SelectedItem).Name;
                 cbDishKitchen.Text = ((Dish)lbDish.SelectedItem).Kitchen;
                 cbDishCourse.Text = ((Dish)lbDish.SelectedItem).Course;
-                // Відображаємо парамтри страви
+                // Відображаємо параметри страви
                 //cbKitchen.Text = ((Dish)lbDish.SelectedItem).Kitchen;
                 //cbCourse.Text = ((Dish)lbDish.SelectedItem).Course;
-                lbIngredients.DataSource = ((Dish)lbDish.SelectedItem).DishIngredients;
+                RefreshIngredients();
             }
         }
 
@@ -112,7 +112,7 @@ namespace Kitchen
 
         private void cbKitchen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbKitchen.SelectedItem != null)
+            if (cbKitchen.SelectedItem != null && cbKitchen.Capture)
             {
                 lbDish.DataSource = null;
                 lbDish.DataSource = ((KitchenType)cbKitchen.SelectedItem).KitchenDishes;
@@ -121,7 +121,7 @@ namespace Kitchen
 
         private void cbCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbCourse.SelectedItem != null)
+            if (cbCourse.SelectedItem != null && cbCourse.Capture)
             {
                 lbDish.DataSource = null;
                 lbDish.DataSource = ((CourseType)cbCourse.SelectedItem).CourseDishes;
@@ -134,16 +134,23 @@ namespace Kitchen
             lbDish.DataSource = Dish.Items.Values.ToList();
         }
 
-        private void btnAddIngredient_Click(object sender, EventArgs e)
+        private void RefreshIngredients()
         {
-            new Ingredient() { Name = tbDishName.Text };
-            RefreshDishes();
+            lbIngredients.DataSource = null;
+            lbIngredients.DataSource = ((Dish)lbDish.SelectedItem).DishIngredients;
         }
 
         private void btnEditDish_Click(object sender, EventArgs e)
         {
             ((Dish)lbDish.SelectedItem).Name = tbDishName.Text;
             RefreshDishes();
+        }
+
+        private void btnEditIngredient_Click(object sender, EventArgs e)
+        {
+            ((Ingredient)lbIngredients.SelectedItem).Name = tbIngredientName.Text;
+            ((Ingredient)lbIngredients.SelectedItem).Count = tbIngredientCount.Text;
+            RefreshIngredients();
         }
     }
 }
