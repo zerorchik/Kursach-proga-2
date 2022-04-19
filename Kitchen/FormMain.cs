@@ -152,5 +152,20 @@ namespace Kitchen
             ((Ingredient)lbIngredients.SelectedItem).Count = tbIngredientCount.Text;
             RefreshIngredients();
         }
+
+        private void btnAddDish_Click(object sender, EventArgs e)
+        {
+            var kitchen = (KitchenType)cbDishKitchen.SelectedItem;
+            var course = (CourseType)cbDishCourse.SelectedItem;
+            new Dish() { Name = tbDishName.Text, KitchenType = kitchen, CourseType = course };
+            RefreshDishes();
+        }
+
+        private void btnAddIngredient_Click(object sender, EventArgs e)
+        {
+            var dish = (Dish)lbDish.SelectedItem;
+            new Ingredient() { Name = tbIngredientName.Text, Count = tbIngredientCount.Text, Dish = dish };
+            RefreshIngredients();
+        }
     }
 }
