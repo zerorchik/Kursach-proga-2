@@ -54,13 +54,5 @@ namespace Kitchen.Models
         {
             return Cost;
         }
-
-        //// Конструктор класа
-        //public Dish(string name, KitchenType kitchen, CourseType course)
-        //{
-        //    Name = name;
-        //    Kitchen = kitchen;
-        //    Course = course;
-        //}
     }
 }

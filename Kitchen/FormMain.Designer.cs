@@ -340,6 +340,7 @@ namespace Kitchen
             this.btnRemoveUser.TabIndex = 33;
             this.btnRemoveUser.Text = "Видалити";
             this.btnRemoveUser.UseVisualStyleBackColor = true;
+            this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
             // 
             // btnEditUser
             // 

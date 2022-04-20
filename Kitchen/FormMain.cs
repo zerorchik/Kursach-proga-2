@@ -111,7 +111,7 @@ namespace Kitchen
 
         private void AdminChecking(bool decigion)
         {
-            tbUserName.Enabled = checkBoxIsAdmin.Enabled = btnAddUser.Enabled = btnRemoveUser.Enabled = btnEditUser.Enabled = decigion;
+            btnEditUser.Enabled = decigion;
             cbDishKitchen.Enabled = cbDishCourse.Enabled = tbDishName.Enabled = tbDishCost.Enabled = btnAddDish.Enabled = btnEditDish.Enabled = btnRemoveDish.Enabled = decigion;
             tbIngredientName.Enabled = tbIngredientCount.Enabled = btnAddIngredient.Enabled = btnEditIngredient.Enabled = btnRemoveIngredient.Enabled = decigion;
         }
@@ -179,8 +179,11 @@ namespace Kitchen
 
         private void RefreshConnectedDishes()
         {
-            lbUserDishes.DataSource = null;
-            lbUserDishes.DataSource = ((User)lbUsers.SelectedItem).Dishes;
+            if(lbUsers.SelectedItem != null)
+            {
+                lbUserDishes.DataSource = null;
+                lbUserDishes.DataSource = ((User)lbUsers.SelectedItem).Dishes;
+            }
         }
 
         private void RefreshConnectedUsers()
@@ -280,10 +283,32 @@ namespace Kitchen
             }
         }
 
+        private void btnRemoveUser_Click(object sender, EventArgs e)
+        {
+            if (lbUsers.SelectedItem != null)
+            {
+                int count = lbUserDishes.Items.Count;
+                for (int i = 0; i < count; i++)
+                {
+                    var dish = lbUserDishes.SelectedItem;
+                    RemoveConnections(dish);
+                }
+                User.Items.Remove(((User)lbUsers.SelectedItem).Id);
+                RefreshUsers();
+                RefreshConnectedDishes();
+            }
+        }
+
         private void btnRemoveConnection_Click(object sender, EventArgs e)
         {
-            var user = lbUsers.SelectedItem;
             var dish = lbDish.SelectedItem;
+            RemoveConnections(dish);
+        }
+
+        private void RemoveConnections(object dishes)
+        {
+            var user = lbUsers.SelectedItem;
+            var dish = dishes;
             var connetionToDel = Connection.Items.Values.Where(connection => connection.Dish == dish && connection.User == user).FirstOrDefault();
             if (connetionToDel != null)
                 Connection.Items.Remove(connetionToDel.Id);

@@ -17,12 +17,6 @@ namespace Kitchen.Models
         {
             return Name;
         }
-
-        //// Конструктор класа
-        //public KitchenType(string name)
-        //{
-        //    Name = name;
-        //}
     }
 
 }
