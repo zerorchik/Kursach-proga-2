@@ -243,12 +243,41 @@ namespace Kitchen
             RefreshUsers();
         }
 
+
         private void btnAddConnection_Click(object sender, EventArgs e)
         {
             new Connection() { User = (User)lbUsers.SelectedItem, Dish = (Dish)lbDish.SelectedItem };
             RefreshConnectedDishes();
             RefreshConnectedUsers();
             RefreshTotalCost();
+        }
+
+        private void btnRemoveIngredient_Click(object sender, EventArgs e)
+        {
+            var dish = lbDish.SelectedItem;
+            var ingredientToDel = Ingredient.Items.Values.Where(connection => connection.Dish == dish).FirstOrDefault();
+            if (ingredientToDel != null)
+            {
+                Ingredient.Items.Remove(ingredientToDel.Id);
+                RefreshIngredients();
+            }
+        }
+
+        private void btnRemoveDish_Click(object sender, EventArgs e)
+        {
+            if(lbDish.SelectedItem != null)
+            {
+                if (lbUserDishes.Items.Contains(lbDish.SelectedItem))
+                    MessageBox.Show("Ви не можете видалити страву, яка вже замовлена!");
+                else
+                {
+                    int count = lbIngredients.Items.Count;
+                    for (int i = 0; i < count; i++)
+                        btnRemoveIngredient_Click(sender, e);
+                    Dish.Items.Remove(((Dish)lbDish.SelectedItem).Id);
+                    RefreshDishes();
+                }
+            }
         }
 
         private void btnRemoveConnection_Click(object sender, EventArgs e)
@@ -268,17 +297,6 @@ namespace Kitchen
             int cost = 0;
             foreach (var dishes in lbUserDishes.Items) cost += dishes.GetHashCode();
             labelTotalCost.Text = Convert.ToString(cost) + " грн";
-        }
-
-        private void btnRemoveIngredient_Click(object sender, EventArgs e)
-        {
-            var dish = lbDish.SelectedItem;
-            var ingredientToDel = Ingredient.Items.Values.Where(connection => connection.Dish == dish).FirstOrDefault();
-            if(ingredientToDel != null)
-            {
-                Ingredient.Items.Remove(ingredientToDel.Id);
-                RefreshIngredients();
-            }
         }
     }
 }
