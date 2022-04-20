@@ -15,10 +15,13 @@ namespace Kitchen
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            var kitchen1 = new KitchenType() { Name = "Українська" };
-            var kitchen2 = new KitchenType() { Name = "Азійська" };
-            var kitchen3 = new KitchenType() { Name = "Європейська" };
-            var kitchen4 = new KitchenType() { Name = "Американська" };
+            var user1 = new User() { Name = "Сашко", IsAdmin = true };
+            var user2 = new User() { Name = "Микола", IsAdmin = false };
+
+            var kitchen1 = new KitchenType() { Name = "Українська кухня" };
+            var kitchen2 = new KitchenType() { Name = "Азійська кухня" };
+            var kitchen3 = new KitchenType() { Name = "Європейська кухня" };
+            var kitchen4 = new KitchenType() { Name = "Американська кухня" };
 
             var course1 = new CourseType() { Name = "Перша страва" };
             var course2 = new CourseType() { Name = "Основна страва" };
@@ -79,11 +82,30 @@ namespace Kitchen
             var product40 = new Ingredient() { Name = "барвник", Count = "на кінчику ножа", Dish = myDish6 };
             var product41 = new Ingredient() { Name = "кукурудзяе борошно", Count = "100 г", Dish = myDish6 };
 
-            RefreshDishes();
+            //RefreshDishes();
             cbKitchen.DataSource = KitchenType.Items.Values.ToList();
             cbCourse.DataSource = CourseType.Items.Values.ToList();
             cbDishKitchen.DataSource = KitchenType.Items.Values.ToList();
             cbDishCourse.DataSource = CourseType.Items.Values.ToList();
+            lbUsers.DataSource = User.Items.Values.ToList();
+            RefreshDishes();
+        }
+
+        private void btnAllDishes_Click(object sender, EventArgs e)
+        {
+            RefreshDishes();
+        }
+
+        private void lbUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbUsers.SelectedItem != null)
+            {
+                // Записуємо у параметри користувача
+                tbUserName.Text = ((User)lbUsers.SelectedItem).Name;
+                checkBoxIsAdmin.Checked = ((User)lbUsers.SelectedItem).IsAdmin ? true : false;
+                // Відображаємо страви користувача
+                lbUserDishes.DataSource = ((User)lbUsers.SelectedItem).Dishes;
+            }
         }
 
         private void lbDish_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,11 +114,9 @@ namespace Kitchen
             {
                 // Записуємо у текстбокси параметри страви
                 tbDishName.Text = ((Dish)lbDish.SelectedItem).Name;
-                cbDishKitchen.Text = ((Dish)lbDish.SelectedItem).Kitchen;
-                cbDishCourse.Text = ((Dish)lbDish.SelectedItem).Course;
-                // Відображаємо параметри страви
-                //cbKitchen.Text = ((Dish)lbDish.SelectedItem).Kitchen;
-                //cbCourse.Text = ((Dish)lbDish.SelectedItem).Course;
+                cbDishKitchen.Text = ((Dish)lbDish.SelectedItem).KitchenType.Name;
+                cbDishCourse.Text = ((Dish)lbDish.SelectedItem).CourseType.Name;
+                // Відображаємо інгридієнти страви
                 RefreshIngredients();
             }
         }

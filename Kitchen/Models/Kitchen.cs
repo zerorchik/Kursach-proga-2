@@ -15,7 +15,7 @@ namespace Kitchen.Models
 
         public override string ToString()
         {
-            return Name + " кухня";
+            return Name;
         }
 
         //// Конструктор класа

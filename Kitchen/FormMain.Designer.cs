@@ -58,12 +58,15 @@ namespace Kitchen
             this.btnAddConnection = new System.Windows.Forms.Button();
             this.labelZamovlenya = new System.Windows.Forms.Label();
             this.lbZamovlenya = new System.Windows.Forms.ListBox();
+            this.lbUserDishes = new System.Windows.Forms.ListBox();
+            this.labelUserDishes = new System.Windows.Forms.Label();
+            this.btnAllDishes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelDish
             // 
             this.labelDish.AutoSize = true;
-            this.labelDish.Location = new System.Drawing.Point(395, 57);
+            this.labelDish.Location = new System.Drawing.Point(594, 57);
             this.labelDish.Name = "labelDish";
             this.labelDish.Size = new System.Drawing.Size(49, 15);
             this.labelDish.TabIndex = 1;
@@ -72,7 +75,7 @@ namespace Kitchen
             // labelKitchen
             // 
             this.labelKitchen.AutoSize = true;
-            this.labelKitchen.Location = new System.Drawing.Point(220, 57);
+            this.labelKitchen.Location = new System.Drawing.Point(419, 57);
             this.labelKitchen.Name = "labelKitchen";
             this.labelKitchen.Size = new System.Drawing.Size(113, 15);
             this.labelKitchen.TabIndex = 3;
@@ -82,7 +85,7 @@ namespace Kitchen
             // 
             this.cbKitchen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKitchen.FormattingEnabled = true;
-            this.cbKitchen.Location = new System.Drawing.Point(220, 96);
+            this.cbKitchen.Location = new System.Drawing.Point(419, 96);
             this.cbKitchen.Name = "cbKitchen";
             this.cbKitchen.Size = new System.Drawing.Size(149, 23);
             this.cbKitchen.TabIndex = 2;
@@ -91,7 +94,7 @@ namespace Kitchen
             // labelCourse
             // 
             this.labelCourse.AutoSize = true;
-            this.labelCourse.Location = new System.Drawing.Point(220, 139);
+            this.labelCourse.Location = new System.Drawing.Point(419, 139);
             this.labelCourse.Name = "labelCourse";
             this.labelCourse.Size = new System.Drawing.Size(69, 15);
             this.labelCourse.TabIndex = 5;
@@ -101,7 +104,7 @@ namespace Kitchen
             // 
             this.cbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCourse.FormattingEnabled = true;
-            this.cbCourse.Location = new System.Drawing.Point(220, 178);
+            this.cbCourse.Location = new System.Drawing.Point(419, 178);
             this.cbCourse.Name = "cbCourse";
             this.cbCourse.Size = new System.Drawing.Size(149, 23);
             this.cbCourse.TabIndex = 4;
@@ -111,7 +114,7 @@ namespace Kitchen
             // 
             this.lbIngredients.FormattingEnabled = true;
             this.lbIngredients.ItemHeight = 15;
-            this.lbIngredients.Location = new System.Drawing.Point(590, 96);
+            this.lbIngredients.Location = new System.Drawing.Point(789, 96);
             this.lbIngredients.Name = "lbIngredients";
             this.lbIngredients.Size = new System.Drawing.Size(223, 289);
             this.lbIngredients.TabIndex = 6;
@@ -120,7 +123,7 @@ namespace Kitchen
             // labelIngredients
             // 
             this.labelIngredients.AutoSize = true;
-            this.labelIngredients.Location = new System.Drawing.Point(590, 57);
+            this.labelIngredients.Location = new System.Drawing.Point(789, 57);
             this.labelIngredients.Name = "labelIngredients";
             this.labelIngredients.Size = new System.Drawing.Size(72, 15);
             this.labelIngredients.TabIndex = 7;
@@ -130,7 +133,7 @@ namespace Kitchen
             // 
             this.lbDish.FormattingEnabled = true;
             this.lbDish.ItemHeight = 15;
-            this.lbDish.Location = new System.Drawing.Point(395, 96);
+            this.lbDish.Location = new System.Drawing.Point(594, 96);
             this.lbDish.Name = "lbDish";
             this.lbDish.Size = new System.Drawing.Size(168, 289);
             this.lbDish.TabIndex = 8;
@@ -138,7 +141,7 @@ namespace Kitchen
             // 
             // btnAddDish
             // 
-            this.btnAddDish.Location = new System.Drawing.Point(220, 533);
+            this.btnAddDish.Location = new System.Drawing.Point(419, 533);
             this.btnAddDish.Name = "btnAddDish";
             this.btnAddDish.Size = new System.Drawing.Size(343, 23);
             this.btnAddDish.TabIndex = 9;
@@ -148,14 +151,14 @@ namespace Kitchen
             // 
             // tbDishName
             // 
-            this.tbDishName.Location = new System.Drawing.Point(395, 435);
+            this.tbDishName.Location = new System.Drawing.Point(594, 435);
             this.tbDishName.Name = "tbDishName";
             this.tbDishName.Size = new System.Drawing.Size(168, 23);
             this.tbDishName.TabIndex = 10;
             // 
             // btnEditDish
             // 
-            this.btnEditDish.Location = new System.Drawing.Point(220, 562);
+            this.btnEditDish.Location = new System.Drawing.Point(419, 562);
             this.btnEditDish.Name = "btnEditDish";
             this.btnEditDish.Size = new System.Drawing.Size(343, 23);
             this.btnEditDish.TabIndex = 11;
@@ -165,7 +168,7 @@ namespace Kitchen
             // 
             // btnRemoveDish
             // 
-            this.btnRemoveDish.Location = new System.Drawing.Point(220, 591);
+            this.btnRemoveDish.Location = new System.Drawing.Point(419, 591);
             this.btnRemoveDish.Name = "btnRemoveDish";
             this.btnRemoveDish.Size = new System.Drawing.Size(343, 23);
             this.btnRemoveDish.TabIndex = 12;
@@ -174,14 +177,14 @@ namespace Kitchen
             // 
             // tbIngredientName
             // 
-            this.tbIngredientName.Location = new System.Drawing.Point(590, 435);
+            this.tbIngredientName.Location = new System.Drawing.Point(789, 435);
             this.tbIngredientName.Name = "tbIngredientName";
             this.tbIngredientName.Size = new System.Drawing.Size(223, 23);
             this.tbIngredientName.TabIndex = 13;
             // 
             // btnAddIngredient
             // 
-            this.btnAddIngredient.Location = new System.Drawing.Point(590, 533);
+            this.btnAddIngredient.Location = new System.Drawing.Point(789, 533);
             this.btnAddIngredient.Name = "btnAddIngredient";
             this.btnAddIngredient.Size = new System.Drawing.Size(223, 23);
             this.btnAddIngredient.TabIndex = 14;
@@ -191,7 +194,7 @@ namespace Kitchen
             // 
             // btnEditIngredient
             // 
-            this.btnEditIngredient.Location = new System.Drawing.Point(590, 562);
+            this.btnEditIngredient.Location = new System.Drawing.Point(789, 562);
             this.btnEditIngredient.Name = "btnEditIngredient";
             this.btnEditIngredient.Size = new System.Drawing.Size(223, 23);
             this.btnEditIngredient.TabIndex = 15;
@@ -201,7 +204,7 @@ namespace Kitchen
             // 
             // btnRemoveIngredient
             // 
-            this.btnRemoveIngredient.Location = new System.Drawing.Point(590, 591);
+            this.btnRemoveIngredient.Location = new System.Drawing.Point(789, 591);
             this.btnRemoveIngredient.Name = "btnRemoveIngredient";
             this.btnRemoveIngredient.Size = new System.Drawing.Size(223, 23);
             this.btnRemoveIngredient.TabIndex = 16;
@@ -211,7 +214,7 @@ namespace Kitchen
             // labelDishChange
             // 
             this.labelDishChange.AutoSize = true;
-            this.labelDishChange.Location = new System.Drawing.Point(395, 408);
+            this.labelDishChange.Location = new System.Drawing.Point(594, 408);
             this.labelDishChange.Name = "labelDishChange";
             this.labelDishChange.Size = new System.Drawing.Size(122, 15);
             this.labelDishChange.TabIndex = 17;
@@ -220,7 +223,7 @@ namespace Kitchen
             // labelIngredientName
             // 
             this.labelIngredientName.AutoSize = true;
-            this.labelIngredientName.Location = new System.Drawing.Point(590, 408);
+            this.labelIngredientName.Location = new System.Drawing.Point(789, 408);
             this.labelIngredientName.Name = "labelIngredientName";
             this.labelIngredientName.Size = new System.Drawing.Size(107, 15);
             this.labelIngredientName.TabIndex = 18;
@@ -229,7 +232,7 @@ namespace Kitchen
             // labelIngredientCount
             // 
             this.labelIngredientCount.AutoSize = true;
-            this.labelIngredientCount.Location = new System.Drawing.Point(590, 475);
+            this.labelIngredientCount.Location = new System.Drawing.Point(789, 475);
             this.labelIngredientCount.Name = "labelIngredientCount";
             this.labelIngredientCount.Size = new System.Drawing.Size(129, 15);
             this.labelIngredientCount.TabIndex = 20;
@@ -237,7 +240,7 @@ namespace Kitchen
             // 
             // tbIngredientCount
             // 
-            this.tbIngredientCount.Location = new System.Drawing.Point(590, 501);
+            this.tbIngredientCount.Location = new System.Drawing.Point(789, 501);
             this.tbIngredientCount.Name = "tbIngredientCount";
             this.tbIngredientCount.Size = new System.Drawing.Size(223, 23);
             this.tbIngredientCount.TabIndex = 19;
@@ -245,7 +248,7 @@ namespace Kitchen
             // labelChooseKitchen
             // 
             this.labelChooseKitchen.AutoSize = true;
-            this.labelChooseKitchen.Location = new System.Drawing.Point(220, 408);
+            this.labelChooseKitchen.Location = new System.Drawing.Point(419, 408);
             this.labelChooseKitchen.Name = "labelChooseKitchen";
             this.labelChooseKitchen.Size = new System.Drawing.Size(91, 15);
             this.labelChooseKitchen.TabIndex = 22;
@@ -255,7 +258,7 @@ namespace Kitchen
             // 
             this.cbDishKitchen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDishKitchen.FormattingEnabled = true;
-            this.cbDishKitchen.Location = new System.Drawing.Point(220, 435);
+            this.cbDishKitchen.Location = new System.Drawing.Point(419, 435);
             this.cbDishKitchen.Name = "cbDishKitchen";
             this.cbDishKitchen.Size = new System.Drawing.Size(149, 23);
             this.cbDishKitchen.TabIndex = 23;
@@ -264,7 +267,7 @@ namespace Kitchen
             // 
             this.cbDishCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDishCourse.FormattingEnabled = true;
-            this.cbDishCourse.Location = new System.Drawing.Point(220, 501);
+            this.cbDishCourse.Location = new System.Drawing.Point(419, 501);
             this.cbDishCourse.Name = "cbDishCourse";
             this.cbDishCourse.Size = new System.Drawing.Size(149, 23);
             this.cbDishCourse.TabIndex = 25;
@@ -272,7 +275,7 @@ namespace Kitchen
             // labelChooseCourse
             // 
             this.labelChooseCourse.AutoSize = true;
-            this.labelChooseCourse.Location = new System.Drawing.Point(220, 474);
+            this.labelChooseCourse.Location = new System.Drawing.Point(419, 474);
             this.labelChooseCourse.Name = "labelChooseCourse";
             this.labelChooseCourse.Size = new System.Drawing.Size(114, 15);
             this.labelChooseCourse.TabIndex = 24;
@@ -286,6 +289,7 @@ namespace Kitchen
             this.lbUsers.Name = "lbUsers";
             this.lbUsers.Size = new System.Drawing.Size(168, 289);
             this.lbUsers.TabIndex = 26;
+            this.lbUsers.SelectedIndexChanged += new System.EventHandler(this.lbUsers_SelectedIndexChanged);
             // 
             // labelUsers
             // 
@@ -351,18 +355,18 @@ namespace Kitchen
             // 
             // btnRemoveConnection
             // 
-            this.btnRemoveConnection.Location = new System.Drawing.Point(220, 358);
+            this.btnRemoveConnection.Location = new System.Drawing.Point(218, 465);
             this.btnRemoveConnection.Name = "btnRemoveConnection";
-            this.btnRemoveConnection.Size = new System.Drawing.Size(149, 23);
+            this.btnRemoveConnection.Size = new System.Drawing.Size(168, 23);
             this.btnRemoveConnection.TabIndex = 35;
-            this.btnRemoveConnection.Text = "Видалити з замовлення";
+            this.btnRemoveConnection.Text = "Вилучити з замовлення";
             this.btnRemoveConnection.UseVisualStyleBackColor = true;
             // 
             // btnAddConnection
             // 
-            this.btnAddConnection.Location = new System.Drawing.Point(220, 329);
+            this.btnAddConnection.Location = new System.Drawing.Point(218, 436);
             this.btnAddConnection.Name = "btnAddConnection";
-            this.btnAddConnection.Size = new System.Drawing.Size(149, 23);
+            this.btnAddConnection.Size = new System.Drawing.Size(168, 23);
             this.btnAddConnection.TabIndex = 34;
             this.btnAddConnection.Text = "Замовити";
             this.btnAddConnection.UseVisualStyleBackColor = true;
@@ -370,7 +374,7 @@ namespace Kitchen
             // labelZamovlenya
             // 
             this.labelZamovlenya.AutoSize = true;
-            this.labelZamovlenya.Location = new System.Drawing.Point(841, 57);
+            this.labelZamovlenya.Location = new System.Drawing.Point(1040, 57);
             this.labelZamovlenya.Name = "labelZamovlenya";
             this.labelZamovlenya.Size = new System.Drawing.Size(78, 15);
             this.labelZamovlenya.TabIndex = 37;
@@ -380,16 +384,47 @@ namespace Kitchen
             // 
             this.lbZamovlenya.FormattingEnabled = true;
             this.lbZamovlenya.ItemHeight = 15;
-            this.lbZamovlenya.Location = new System.Drawing.Point(841, 96);
+            this.lbZamovlenya.Location = new System.Drawing.Point(1040, 96);
             this.lbZamovlenya.Name = "lbZamovlenya";
             this.lbZamovlenya.Size = new System.Drawing.Size(360, 289);
             this.lbZamovlenya.TabIndex = 36;
+            // 
+            // lbUserDishes
+            // 
+            this.lbUserDishes.FormattingEnabled = true;
+            this.lbUserDishes.ItemHeight = 15;
+            this.lbUserDishes.Location = new System.Drawing.Point(218, 96);
+            this.lbUserDishes.Name = "lbUserDishes";
+            this.lbUserDishes.Size = new System.Drawing.Size(168, 289);
+            this.lbUserDishes.TabIndex = 39;
+            // 
+            // labelUserDishes
+            // 
+            this.labelUserDishes.AutoSize = true;
+            this.labelUserDishes.Location = new System.Drawing.Point(218, 57);
+            this.labelUserDishes.Name = "labelUserDishes";
+            this.labelUserDishes.Size = new System.Drawing.Size(89, 15);
+            this.labelUserDishes.TabIndex = 38;
+            this.labelUserDishes.Text = "Обрані страви:";
+            // 
+            // btnAllDishes
+            // 
+            this.btnAllDishes.Location = new System.Drawing.Point(419, 229);
+            this.btnAllDishes.Name = "btnAllDishes";
+            this.btnAllDishes.Size = new System.Drawing.Size(149, 23);
+            this.btnAllDishes.TabIndex = 40;
+            this.btnAllDishes.Text = "Усі страви";
+            this.btnAllDishes.UseVisualStyleBackColor = true;
+            this.btnAllDishes.Click += new System.EventHandler(this.btnAllDishes_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 640);
+            this.ClientSize = new System.Drawing.Size(1451, 640);
+            this.Controls.Add(this.btnAllDishes);
+            this.Controls.Add(this.lbUserDishes);
+            this.Controls.Add(this.labelUserDishes);
             this.Controls.Add(this.labelZamovlenya);
             this.Controls.Add(this.lbZamovlenya);
             this.Controls.Add(this.btnRemoveConnection);
@@ -471,6 +506,9 @@ namespace Kitchen
         private System.Windows.Forms.Button btnAddConnection;
         private System.Windows.Forms.Label labelZamovlenya;
         private System.Windows.Forms.ListBox lbZamovlenya;
+        private System.Windows.Forms.ListBox lbUserDishes;
+        private System.Windows.Forms.Label labelUserDishes;
+        private System.Windows.Forms.Button btnAllDishes;
     }
 }
 

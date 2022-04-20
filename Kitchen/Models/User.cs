@@ -5,6 +5,9 @@ namespace Kitchen.Models
 {
     public class User : Base<User>
     {
+        public string Name { get; set; }
+        public bool IsAdmin { get; set; }
+
         // Словник зв'язків з користувачем
         public List<Connection> Connetions
         {
@@ -15,6 +18,11 @@ namespace Kitchen.Models
         public List<Dish> Dishes
         {
             get { return Connection.Items.Values.Where(connection => connection.User == this).Select(connection => connection.Dish).ToList(); }
+        }
+
+        public override string ToString()
+        {
+            return Name + (IsAdmin? "(адмін)":"");
         }
     }
 }
