@@ -105,7 +105,15 @@ namespace Kitchen
                 // Відображаємо страви користувача
                 RefreshConnectedDishes();
                 RefreshTotalCost();
+                AdminChecking(((User)lbUsers.SelectedItem).IsAdmin);
             }
+        }
+
+        private void AdminChecking(bool decigion)
+        {
+            tbUserName.Enabled = checkBoxIsAdmin.Enabled = btnAddUser.Enabled = btnRemoveUser.Enabled = btnEditUser.Enabled = decigion;
+            cbDishKitchen.Enabled = cbDishCourse.Enabled = tbDishName.Enabled = tbDishCost.Enabled = btnAddDish.Enabled = btnEditDish.Enabled = btnRemoveDish.Enabled = decigion;
+            tbIngredientName.Enabled = tbIngredientCount.Enabled = btnAddIngredient.Enabled = btnEditIngredient.Enabled = btnRemoveIngredient.Enabled = decigion;
         }
 
         private void lbDish_SelectedIndexChanged(object sender, EventArgs e)
