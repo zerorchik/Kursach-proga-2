@@ -7,8 +7,6 @@ namespace Kitchen.Models
     public class Dish : Base<Dish>
     {
         public string Name { get; set; }
-        //public string Kitchen { get { return KitchenType.Name; } set { } }
-        //public string Course { get { return CourseType.Name; } set { } }
 
         // Словник інгридієнтів у страві
         public List<Ingredient> DishIngredients

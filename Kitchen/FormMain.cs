@@ -25,7 +25,7 @@ namespace Kitchen
 
             var course1 = new CourseType() { Name = "Перша страва" };
             var course2 = new CourseType() { Name = "Основна страва" };
-            var course3 = new CourseType() { Name = "Салат" } ;
+            var course3 = new CourseType() { Name = "Салат" };
             var course4 = new CourseType() { Name = "Десерт" };
             var course5 = new CourseType() { Name = "Напій" };
 
@@ -82,12 +82,11 @@ namespace Kitchen
             var product40 = new Ingredient() { Name = "барвник", Count = "на кінчику ножа", Dish = myDish6 };
             var product41 = new Ingredient() { Name = "кукурудзяе борошно", Count = "100 г", Dish = myDish6 };
 
-            //RefreshDishes();
             cbKitchen.DataSource = KitchenType.Items.Values.ToList();
             cbCourse.DataSource = CourseType.Items.Values.ToList();
             cbDishKitchen.DataSource = KitchenType.Items.Values.ToList();
             cbDishCourse.DataSource = CourseType.Items.Values.ToList();
-            lbUsers.DataSource = User.Items.Values.ToList();
+            RefreshUsers();
             RefreshDishes();
         }
 
@@ -104,7 +103,7 @@ namespace Kitchen
                 tbUserName.Text = ((User)lbUsers.SelectedItem).Name;
                 checkBoxIsAdmin.Checked = ((User)lbUsers.SelectedItem).IsAdmin ? true : false;
                 // Відображаємо страви користувача
-                lbUserDishes.DataSource = ((User)lbUsers.SelectedItem).Dishes;
+                RefreshConnectedDishes();
             }
         }
 
@@ -148,6 +147,12 @@ namespace Kitchen
             }
         }
 
+        private void RefreshUsers()
+        {
+            lbUsers.DataSource = null;
+            lbUsers.DataSource = User.Items.Values.ToList();
+        }
+
         private void RefreshDishes()
         {
             lbDish.DataSource = null;
@@ -160,9 +165,20 @@ namespace Kitchen
             lbIngredients.DataSource = ((Dish)lbDish.SelectedItem).DishIngredients;
         }
 
+        private void RefreshConnectedDishes()
+        {
+            lbUserDishes.DataSource = null;
+            lbUserDishes.DataSource = ((User)lbUsers.SelectedItem).Dishes;
+        }
+
         private void btnEditDish_Click(object sender, EventArgs e)
         {
+            KitchenType kitchen;
+            CourseType course;
+            VarsForDish(out kitchen, out course);
             ((Dish)lbDish.SelectedItem).Name = tbDishName.Text;
+            ((Dish)lbDish.SelectedItem).KitchenType = kitchen;
+            ((Dish)lbDish.SelectedItem).CourseType = course;
             RefreshDishes();
         }
 
@@ -171,6 +187,13 @@ namespace Kitchen
             ((Ingredient)lbIngredients.SelectedItem).Name = tbIngredientName.Text;
             ((Ingredient)lbIngredients.SelectedItem).Count = tbIngredientCount.Text;
             RefreshIngredients();
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            ((User)lbUsers.SelectedItem).Name = tbUserName.Text;
+            ((User)lbUsers.SelectedItem).IsAdmin = checkBoxIsAdmin.Checked;
+            RefreshUsers();
         }
 
         private void btnAddDish_Click(object sender, EventArgs e)
@@ -193,6 +216,12 @@ namespace Kitchen
             var dish = (Dish)lbDish.SelectedItem;
             new Ingredient() { Name = tbIngredientName.Text, Count = tbIngredientCount.Text, Dish = dish };
             RefreshIngredients();
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            new User() { Name = tbUserName.Text, IsAdmin = checkBoxIsAdmin.Checked };
+            RefreshUsers();
         }
     }
 }
