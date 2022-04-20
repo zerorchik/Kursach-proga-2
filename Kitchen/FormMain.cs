@@ -269,5 +269,16 @@ namespace Kitchen
             foreach (var dishes in lbUserDishes.Items) cost += dishes.GetHashCode();
             labelTotalCost.Text = Convert.ToString(cost) + " грн";
         }
+
+        private void btnRemoveIngredient_Click(object sender, EventArgs e)
+        {
+            var dish = lbDish.SelectedItem;
+            var ingredientToDel = Ingredient.Items.Values.Where(connection => connection.Dish == dish).FirstOrDefault();
+            if(ingredientToDel != null)
+            {
+                Ingredient.Items.Remove(ingredientToDel.Id);
+                RefreshIngredients();
+            }
+        }
     }
 }

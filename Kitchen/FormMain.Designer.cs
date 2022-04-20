@@ -214,6 +214,7 @@ namespace Kitchen
             this.btnRemoveIngredient.TabIndex = 16;
             this.btnRemoveIngredient.Text = "Видалити";
             this.btnRemoveIngredient.UseVisualStyleBackColor = true;
+            this.btnRemoveIngredient.Click += new System.EventHandler(this.btnRemoveIngredient_Click);
             // 
             // labelDishChange
             // 
