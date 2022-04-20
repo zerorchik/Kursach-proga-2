@@ -22,7 +22,7 @@ namespace Kitchen.Models
 
         public override string ToString()
         {
-            return Name + (IsAdmin? "(адмін)":"");
+            return Name + (IsAdmin? " (адмін)":"");
         }
     }
 }

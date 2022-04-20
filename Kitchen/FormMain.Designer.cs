@@ -365,6 +365,7 @@ namespace Kitchen
             this.btnRemoveConnection.TabIndex = 35;
             this.btnRemoveConnection.Text = "Вилучити з замовлення";
             this.btnRemoveConnection.UseVisualStyleBackColor = true;
+            this.btnRemoveConnection.Click += new System.EventHandler(this.btnRemoveConnection_Click);
             // 
             // btnAddConnection
             // 
@@ -372,8 +373,9 @@ namespace Kitchen
             this.btnAddConnection.Name = "btnAddConnection";
             this.btnAddConnection.Size = new System.Drawing.Size(168, 23);
             this.btnAddConnection.TabIndex = 34;
-            this.btnAddConnection.Text = "Замовити";
+            this.btnAddConnection.Text = "Додати до замовлення";
             this.btnAddConnection.UseVisualStyleBackColor = true;
+            this.btnAddConnection.Click += new System.EventHandler(this.btnAddConnection_Click);
             // 
             // labelZamovlenya
             // 

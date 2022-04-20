@@ -117,6 +117,8 @@ namespace Kitchen
                 cbDishCourse.Text = ((Dish)lbDish.SelectedItem).CourseType.Name;
                 // Відображаємо інгридієнти страви
                 RefreshIngredients();
+                // Відображаємо клієнтів, що замовили страву
+                RefreshConnectedUsers();
             }
         }
 
@@ -171,6 +173,12 @@ namespace Kitchen
             lbUserDishes.DataSource = ((User)lbUsers.SelectedItem).Dishes;
         }
 
+        private void RefreshConnectedUsers()
+        {
+            lbConnectedUser.DataSource = null;
+            lbConnectedUser.DataSource = ((Dish)lbDish.SelectedItem).Users;
+        }
+
         private void btnEditDish_Click(object sender, EventArgs e)
         {
             KitchenType kitchen;
@@ -222,6 +230,24 @@ namespace Kitchen
         {
             new User() { Name = tbUserName.Text, IsAdmin = checkBoxIsAdmin.Checked };
             RefreshUsers();
+        }
+
+        private void btnAddConnection_Click(object sender, EventArgs e)
+        {
+            new Connection() { User = (User)lbUsers.SelectedItem, Dish = (Dish)lbDish.SelectedItem };
+            RefreshConnectedDishes();
+            RefreshConnectedUsers();
+        }
+
+        private void btnRemoveConnection_Click(object sender, EventArgs e)
+        {
+            var user = lbUsers.SelectedItem;
+            var dish = lbDish.SelectedItem;
+            var connetionToDel = Connection.Items.Values.Where(connection => connection.Dish == dish && connection.User == user).FirstOrDefault();
+            if (connetionToDel != null)
+                Connection.Items.Remove(connetionToDel.Id);
+            RefreshConnectedDishes();
+            RefreshConnectedUsers();
         }
     }
 }
