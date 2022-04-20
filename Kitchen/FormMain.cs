@@ -112,7 +112,7 @@ namespace Kitchen
 
         private void cbKitchen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbKitchen.SelectedItem != null && cbKitchen.Capture)
+            if (cbKitchen.SelectedItem != null)
             {
                 lbDish.DataSource = null;
                 lbDish.DataSource = ((KitchenType)cbKitchen.SelectedItem).KitchenDishes;
@@ -121,7 +121,7 @@ namespace Kitchen
 
         private void cbCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbCourse.SelectedItem != null && cbCourse.Capture)
+            if (cbCourse.SelectedItem != null)
             {
                 lbDish.DataSource = null;
                 lbDish.DataSource = ((CourseType)cbCourse.SelectedItem).CourseDishes;
@@ -155,10 +155,17 @@ namespace Kitchen
 
         private void btnAddDish_Click(object sender, EventArgs e)
         {
-            var kitchen = (KitchenType)cbDishKitchen.SelectedItem;
-            var course = (CourseType)cbDishCourse.SelectedItem;
+            KitchenType kitchen;
+            CourseType course;
+            VarsForDish(out kitchen, out course);
             new Dish() { Name = tbDishName.Text, KitchenType = kitchen, CourseType = course };
             RefreshDishes();
+        }
+
+        private void VarsForDish(out KitchenType kitchen, out CourseType course)
+        {
+            kitchen = (KitchenType)cbDishKitchen.SelectedItem;
+            course = (CourseType)cbDishCourse.SelectedItem;
         }
 
         private void btnAddIngredient_Click(object sender, EventArgs e)

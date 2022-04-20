@@ -13,7 +13,19 @@ namespace Kitchen.Models
         // Словник інгридієнтів у страві
         public List<Ingredient> DishIngredients
         {
-            get { return Ingredient.Items.Values.Where(li => li.Dish == this).ToList(); }
+            get { return Ingredient.Items.Values.Where(ingredient => ingredient.Dish == this).ToList(); }
+        }
+
+        // Словник зв'язків зі стравою
+        public List<Connection> Connetions
+        {
+            get { return Connection.Items.Values.Where(connection => connection.Dish == this).ToList(); }
+        }
+
+        // Словник користувачів у страві
+        public List<User> Users
+        {
+            get { return Connection.Items.Values.Where(connection => connection.Dish == this).Select(connection => connection.User).ToList(); }
         }
 
         // Ініціалізатор властивості для вмісту страв у кухні

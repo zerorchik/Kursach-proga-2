@@ -10,7 +10,7 @@ namespace Kitchen.Models
         // Словник страв у кухні
         public List<Dish> KitchenDishes
         {
-            get { return Dish.Items.Values.Where(li => li.KitchenType == this).ToList(); }
+            get { return Dish.Items.Values.Where(dish => dish.KitchenType == this).ToList(); }
         }
 
         public override string ToString()
