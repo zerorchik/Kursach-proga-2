@@ -314,5 +314,46 @@ namespace Kitchen
             foreach (var dishes in lbUserDishes.Items) cost += dishes.GetHashCode();
             labelTotalCost.Text = Convert.ToString(cost) + " грн";
         }
+
+        private void btnCheap_Click(object sender, EventArgs e)
+        {
+            ClearLbDish();
+            foreach (Dish dish in Dish.Items.Values)
+                if (Dish.DefineCheap(dish))
+                    lbDish.Items.Add(dish);
+        }
+
+        private void btnMiddle_Click(object sender, EventArgs e)
+        {
+            ClearLbDish();
+            foreach (Dish dish in Dish.Items.Values)
+                if (Dish.DefineMediumCost(dish))
+                    lbDish.Items.Add(dish);
+        }
+
+        private void btnExpensive_Click(object sender, EventArgs e)
+        {
+            ClearLbDish();
+            foreach (Dish dish in Dish.Items.Values)
+                if (Dish.DefineExpensive(dish))
+                    lbDish.Items.Add(dish);
+        }
+
+        private void ClearLbDish()
+        {
+            if(lbDish.DataSource != null)
+                lbDish.DataSource = null;
+            else
+            {
+                int count = lbDish.Items.Count;
+                for (int ii, i = 0; i < count; i++)
+                {
+                    if (count - i == 1) ii = 0;
+                    else if (i % 2 == 0) ii = i / 2 + 1;
+                    else ii = i / 2;
+                        lbDish.Items.RemoveAt(ii);
+                }
+            }
+        }
     }
 }

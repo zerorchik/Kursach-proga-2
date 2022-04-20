@@ -67,6 +67,9 @@ namespace Kitchen
             this.labelTotalCost = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCheap = new System.Windows.Forms.Button();
+            this.btnMiddle = new System.Windows.Forms.Button();
+            this.btnExpensive = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelDish
@@ -152,6 +155,8 @@ namespace Kitchen
             // btnAddDish
             // 
             this.btnAddDish.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddDish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddDish.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddDish.Location = new System.Drawing.Point(608, 594);
             this.btnAddDish.Name = "btnAddDish";
@@ -170,6 +175,7 @@ namespace Kitchen
             // 
             // btnEditDish
             // 
+            this.btnEditDish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditDish.Location = new System.Drawing.Point(608, 623);
             this.btnEditDish.Name = "btnEditDish";
             this.btnEditDish.Size = new System.Drawing.Size(343, 23);
@@ -181,6 +187,8 @@ namespace Kitchen
             // btnRemoveDish
             // 
             this.btnRemoveDish.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveDish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveDish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemoveDish.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRemoveDish.Location = new System.Drawing.Point(608, 652);
             this.btnRemoveDish.Name = "btnRemoveDish";
@@ -200,6 +208,8 @@ namespace Kitchen
             // btnAddIngredient
             // 
             this.btnAddIngredient.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddIngredient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddIngredient.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddIngredient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddIngredient.Location = new System.Drawing.Point(978, 594);
             this.btnAddIngredient.Name = "btnAddIngredient";
@@ -211,6 +221,7 @@ namespace Kitchen
             // 
             // btnEditIngredient
             // 
+            this.btnEditIngredient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditIngredient.Location = new System.Drawing.Point(978, 623);
             this.btnEditIngredient.Name = "btnEditIngredient";
             this.btnEditIngredient.Size = new System.Drawing.Size(223, 23);
@@ -222,6 +233,8 @@ namespace Kitchen
             // btnRemoveIngredient
             // 
             this.btnRemoveIngredient.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveIngredient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveIngredient.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemoveIngredient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRemoveIngredient.Location = new System.Drawing.Point(978, 652);
             this.btnRemoveIngredient.Name = "btnRemoveIngredient";
@@ -350,6 +363,8 @@ namespace Kitchen
             // btnRemoveUser
             // 
             this.btnRemoveUser.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemoveUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRemoveUser.Location = new System.Drawing.Point(26, 652);
             this.btnRemoveUser.Name = "btnRemoveUser";
@@ -361,6 +376,7 @@ namespace Kitchen
             // 
             // btnEditUser
             // 
+            this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditUser.Location = new System.Drawing.Point(26, 623);
             this.btnEditUser.Name = "btnEditUser";
             this.btnEditUser.Size = new System.Drawing.Size(167, 23);
@@ -372,6 +388,8 @@ namespace Kitchen
             // btnAddUser
             // 
             this.btnAddUser.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddUser.Location = new System.Drawing.Point(26, 594);
             this.btnAddUser.Name = "btnAddUser";
@@ -384,6 +402,8 @@ namespace Kitchen
             // btnRemoveConnection
             // 
             this.btnRemoveConnection.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveConnection.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemoveConnection.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRemoveConnection.Location = new System.Drawing.Point(218, 638);
             this.btnRemoveConnection.Name = "btnRemoveConnection";
@@ -396,6 +416,8 @@ namespace Kitchen
             // btnAddConnection
             // 
             this.btnAddConnection.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddConnection.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddConnection.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddConnection.Location = new System.Drawing.Point(218, 594);
             this.btnAddConnection.Name = "btnAddConnection";
@@ -427,6 +449,8 @@ namespace Kitchen
             // btnAllDishes
             // 
             this.btnAllDishes.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAllDishes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllDishes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAllDishes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAllDishes.Location = new System.Drawing.Point(608, 278);
             this.btnAllDishes.Name = "btnAllDishes";
@@ -511,11 +535,56 @@ namespace Kitchen
             this.label2.TabIndex = 51;
             this.label2.Text = "Відображення зв\'язків:";
             // 
+            // btnCheap
+            // 
+            this.btnCheap.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCheap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheap.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCheap.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCheap.Location = new System.Drawing.Point(608, 333);
+            this.btnCheap.Name = "btnCheap";
+            this.btnCheap.Size = new System.Drawing.Size(149, 23);
+            this.btnCheap.TabIndex = 52;
+            this.btnCheap.Text = "Дешеві";
+            this.btnCheap.UseVisualStyleBackColor = false;
+            this.btnCheap.Click += new System.EventHandler(this.btnCheap_Click);
+            // 
+            // btnMiddle
+            // 
+            this.btnMiddle.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnMiddle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiddle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMiddle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnMiddle.Location = new System.Drawing.Point(608, 362);
+            this.btnMiddle.Name = "btnMiddle";
+            this.btnMiddle.Size = new System.Drawing.Size(149, 23);
+            this.btnMiddle.TabIndex = 53;
+            this.btnMiddle.Text = "Середньої ціни";
+            this.btnMiddle.UseVisualStyleBackColor = false;
+            this.btnMiddle.Click += new System.EventHandler(this.btnMiddle_Click);
+            // 
+            // btnExpensive
+            // 
+            this.btnExpensive.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnExpensive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpensive.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnExpensive.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExpensive.Location = new System.Drawing.Point(608, 391);
+            this.btnExpensive.Name = "btnExpensive";
+            this.btnExpensive.Size = new System.Drawing.Size(149, 23);
+            this.btnExpensive.TabIndex = 54;
+            this.btnExpensive.Text = "Дорогі";
+            this.btnExpensive.UseVisualStyleBackColor = false;
+            this.btnExpensive.Click += new System.EventHandler(this.btnExpensive_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 730);
+            this.Controls.Add(this.btnExpensive);
+            this.Controls.Add(this.btnMiddle);
+            this.Controls.Add(this.btnCheap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTotalCost);
@@ -561,6 +630,7 @@ namespace Kitchen
             this.Controls.Add(this.labelKitchen);
             this.Controls.Add(this.cbKitchen);
             this.Controls.Add(this.labelDish);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "FormMain";
             this.Text = "Recepies";
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -615,6 +685,9 @@ namespace Kitchen
         private System.Windows.Forms.Label labelTotalCost;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCheap;
+        private System.Windows.Forms.Button btnMiddle;
+        private System.Windows.Forms.Button btnExpensive;
     }
 }
 

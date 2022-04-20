@@ -45,6 +45,25 @@ namespace Kitchen.Models
             set { _courseId = value.Id; }
         }
 
+        // Реалізація трьох статичних методів
+        public static bool DefineCheap(Dish dishes)
+        {
+            if (dishes.Cost < 50) return true;
+            return false;
+        }
+
+        public static bool DefineMediumCost(Dish dishes)
+        {
+            if (dishes.Cost >= 50 && dishes.Cost < 100) return true;
+            return false;
+        }
+
+        public static bool DefineExpensive(Dish dishes)
+        {
+            if (dishes.Cost > 100) return true;
+            return false;
+        }
+
         public override string ToString()
         {
             return Name + " - " + Cost;

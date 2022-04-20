@@ -17,11 +17,5 @@ namespace Kitchen.Models
         {
             return Name;
         }
-
-        //// Конструктор класа
-        //public CourseType(string name)
-        //{
-        //    Name = name;
-        //}
     }
 }

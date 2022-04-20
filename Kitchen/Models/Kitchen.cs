@@ -18,5 +18,4 @@ namespace Kitchen.Models
             return Name;
         }
     }
-
 }
