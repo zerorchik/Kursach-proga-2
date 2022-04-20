@@ -289,10 +289,7 @@ namespace Kitchen
             {
                 int count = lbUserDishes.Items.Count;
                 for (int i = 0; i < count; i++)
-                {
-                    var dish = lbUserDishes.SelectedItem;
-                    RemoveConnections(dish);
-                }
+                    btnRemoveConnection_Click(sender, e);
                 User.Items.Remove(((User)lbUsers.SelectedItem).Id);
                 RefreshUsers();
                 RefreshConnectedDishes();
@@ -301,14 +298,8 @@ namespace Kitchen
 
         private void btnRemoveConnection_Click(object sender, EventArgs e)
         {
-            var dish = lbDish.SelectedItem;
-            RemoveConnections(dish);
-        }
-
-        private void RemoveConnections(object dishes)
-        {
             var user = lbUsers.SelectedItem;
-            var dish = dishes;
+            var dish = lbUserDishes.SelectedItem;
             var connetionToDel = Connection.Items.Values.Where(connection => connection.Dish == dish && connection.User == user).FirstOrDefault();
             if (connetionToDel != null)
                 Connection.Items.Remove(connetionToDel.Id);

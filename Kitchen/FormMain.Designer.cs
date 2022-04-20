@@ -65,23 +65,27 @@ namespace Kitchen
             this.tbDishCost = new System.Windows.Forms.TextBox();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelTotalCost = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelDish
             // 
             this.labelDish.AutoSize = true;
-            this.labelDish.Location = new System.Drawing.Point(783, 57);
+            this.labelDish.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDish.Location = new System.Drawing.Point(783, 118);
             this.labelDish.Name = "labelDish";
-            this.labelDish.Size = new System.Drawing.Size(49, 15);
+            this.labelDish.Size = new System.Drawing.Size(73, 22);
             this.labelDish.TabIndex = 1;
             this.labelDish.Text = "Страви:";
             // 
             // labelKitchen
             // 
             this.labelKitchen.AutoSize = true;
-            this.labelKitchen.Location = new System.Drawing.Point(608, 57);
+            this.labelKitchen.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelKitchen.Location = new System.Drawing.Point(598, 118);
             this.labelKitchen.Name = "labelKitchen";
-            this.labelKitchen.Size = new System.Drawing.Size(113, 15);
+            this.labelKitchen.Size = new System.Drawing.Size(168, 22);
             this.labelKitchen.TabIndex = 3;
             this.labelKitchen.Text = "Кухні народів світу:";
             // 
@@ -89,7 +93,7 @@ namespace Kitchen
             // 
             this.cbKitchen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKitchen.FormattingEnabled = true;
-            this.cbKitchen.Location = new System.Drawing.Point(608, 96);
+            this.cbKitchen.Location = new System.Drawing.Point(608, 157);
             this.cbKitchen.Name = "cbKitchen";
             this.cbKitchen.Size = new System.Drawing.Size(149, 23);
             this.cbKitchen.TabIndex = 2;
@@ -98,9 +102,10 @@ namespace Kitchen
             // labelCourse
             // 
             this.labelCourse.AutoSize = true;
-            this.labelCourse.Location = new System.Drawing.Point(608, 139);
+            this.labelCourse.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCourse.Location = new System.Drawing.Point(598, 199);
             this.labelCourse.Name = "labelCourse";
-            this.labelCourse.Size = new System.Drawing.Size(69, 15);
+            this.labelCourse.Size = new System.Drawing.Size(102, 22);
             this.labelCourse.TabIndex = 5;
             this.labelCourse.Text = "Тип блюда:";
             // 
@@ -108,7 +113,7 @@ namespace Kitchen
             // 
             this.cbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCourse.FormattingEnabled = true;
-            this.cbCourse.Location = new System.Drawing.Point(608, 178);
+            this.cbCourse.Location = new System.Drawing.Point(608, 239);
             this.cbCourse.Name = "cbCourse";
             this.cbCourse.Size = new System.Drawing.Size(149, 23);
             this.cbCourse.TabIndex = 4;
@@ -118,7 +123,7 @@ namespace Kitchen
             // 
             this.lbIngredients.FormattingEnabled = true;
             this.lbIngredients.ItemHeight = 15;
-            this.lbIngredients.Location = new System.Drawing.Point(978, 96);
+            this.lbIngredients.Location = new System.Drawing.Point(978, 157);
             this.lbIngredients.Name = "lbIngredients";
             this.lbIngredients.Size = new System.Drawing.Size(223, 289);
             this.lbIngredients.TabIndex = 6;
@@ -127,9 +132,10 @@ namespace Kitchen
             // labelIngredients
             // 
             this.labelIngredients.AutoSize = true;
-            this.labelIngredients.Location = new System.Drawing.Point(978, 57);
+            this.labelIngredients.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelIngredients.Location = new System.Drawing.Point(978, 118);
             this.labelIngredients.Name = "labelIngredients";
-            this.labelIngredients.Size = new System.Drawing.Size(72, 15);
+            this.labelIngredients.Size = new System.Drawing.Size(110, 22);
             this.labelIngredients.TabIndex = 7;
             this.labelIngredients.Text = "Інгредієнти:";
             // 
@@ -137,7 +143,7 @@ namespace Kitchen
             // 
             this.lbDish.FormattingEnabled = true;
             this.lbDish.ItemHeight = 15;
-            this.lbDish.Location = new System.Drawing.Point(783, 96);
+            this.lbDish.Location = new System.Drawing.Point(783, 157);
             this.lbDish.Name = "lbDish";
             this.lbDish.Size = new System.Drawing.Size(168, 289);
             this.lbDish.TabIndex = 8;
@@ -145,24 +151,26 @@ namespace Kitchen
             // 
             // btnAddDish
             // 
-            this.btnAddDish.Location = new System.Drawing.Point(608, 533);
+            this.btnAddDish.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddDish.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddDish.Location = new System.Drawing.Point(608, 594);
             this.btnAddDish.Name = "btnAddDish";
             this.btnAddDish.Size = new System.Drawing.Size(343, 23);
             this.btnAddDish.TabIndex = 9;
             this.btnAddDish.Text = "Додати";
-            this.btnAddDish.UseVisualStyleBackColor = true;
+            this.btnAddDish.UseVisualStyleBackColor = false;
             this.btnAddDish.Click += new System.EventHandler(this.btnAddDish_Click);
             // 
             // tbDishName
             // 
-            this.tbDishName.Location = new System.Drawing.Point(783, 435);
+            this.tbDishName.Location = new System.Drawing.Point(783, 496);
             this.tbDishName.Name = "tbDishName";
             this.tbDishName.Size = new System.Drawing.Size(168, 23);
             this.tbDishName.TabIndex = 10;
             // 
             // btnEditDish
             // 
-            this.btnEditDish.Location = new System.Drawing.Point(608, 562);
+            this.btnEditDish.Location = new System.Drawing.Point(608, 623);
             this.btnEditDish.Name = "btnEditDish";
             this.btnEditDish.Size = new System.Drawing.Size(343, 23);
             this.btnEditDish.TabIndex = 11;
@@ -172,34 +180,38 @@ namespace Kitchen
             // 
             // btnRemoveDish
             // 
-            this.btnRemoveDish.Location = new System.Drawing.Point(608, 591);
+            this.btnRemoveDish.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveDish.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRemoveDish.Location = new System.Drawing.Point(608, 652);
             this.btnRemoveDish.Name = "btnRemoveDish";
             this.btnRemoveDish.Size = new System.Drawing.Size(343, 23);
             this.btnRemoveDish.TabIndex = 12;
             this.btnRemoveDish.Text = "Видалити";
-            this.btnRemoveDish.UseVisualStyleBackColor = true;
+            this.btnRemoveDish.UseVisualStyleBackColor = false;
             this.btnRemoveDish.Click += new System.EventHandler(this.btnRemoveDish_Click);
             // 
             // tbIngredientName
             // 
-            this.tbIngredientName.Location = new System.Drawing.Point(978, 435);
+            this.tbIngredientName.Location = new System.Drawing.Point(978, 496);
             this.tbIngredientName.Name = "tbIngredientName";
             this.tbIngredientName.Size = new System.Drawing.Size(223, 23);
             this.tbIngredientName.TabIndex = 13;
             // 
             // btnAddIngredient
             // 
-            this.btnAddIngredient.Location = new System.Drawing.Point(978, 533);
+            this.btnAddIngredient.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddIngredient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddIngredient.Location = new System.Drawing.Point(978, 594);
             this.btnAddIngredient.Name = "btnAddIngredient";
             this.btnAddIngredient.Size = new System.Drawing.Size(223, 23);
             this.btnAddIngredient.TabIndex = 14;
             this.btnAddIngredient.Text = "Додати";
-            this.btnAddIngredient.UseVisualStyleBackColor = true;
+            this.btnAddIngredient.UseVisualStyleBackColor = false;
             this.btnAddIngredient.Click += new System.EventHandler(this.btnAddIngredient_Click);
             // 
             // btnEditIngredient
             // 
-            this.btnEditIngredient.Location = new System.Drawing.Point(978, 562);
+            this.btnEditIngredient.Location = new System.Drawing.Point(978, 623);
             this.btnEditIngredient.Name = "btnEditIngredient";
             this.btnEditIngredient.Size = new System.Drawing.Size(223, 23);
             this.btnEditIngredient.TabIndex = 15;
@@ -209,18 +221,20 @@ namespace Kitchen
             // 
             // btnRemoveIngredient
             // 
-            this.btnRemoveIngredient.Location = new System.Drawing.Point(978, 591);
+            this.btnRemoveIngredient.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveIngredient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRemoveIngredient.Location = new System.Drawing.Point(978, 652);
             this.btnRemoveIngredient.Name = "btnRemoveIngredient";
             this.btnRemoveIngredient.Size = new System.Drawing.Size(223, 23);
             this.btnRemoveIngredient.TabIndex = 16;
             this.btnRemoveIngredient.Text = "Видалити";
-            this.btnRemoveIngredient.UseVisualStyleBackColor = true;
+            this.btnRemoveIngredient.UseVisualStyleBackColor = false;
             this.btnRemoveIngredient.Click += new System.EventHandler(this.btnRemoveIngredient_Click);
             // 
             // labelDishChange
             // 
             this.labelDishChange.AutoSize = true;
-            this.labelDishChange.Location = new System.Drawing.Point(783, 408);
+            this.labelDishChange.Location = new System.Drawing.Point(783, 469);
             this.labelDishChange.Name = "labelDishChange";
             this.labelDishChange.Size = new System.Drawing.Size(122, 15);
             this.labelDishChange.TabIndex = 17;
@@ -229,7 +243,7 @@ namespace Kitchen
             // labelIngredientName
             // 
             this.labelIngredientName.AutoSize = true;
-            this.labelIngredientName.Location = new System.Drawing.Point(978, 408);
+            this.labelIngredientName.Location = new System.Drawing.Point(978, 469);
             this.labelIngredientName.Name = "labelIngredientName";
             this.labelIngredientName.Size = new System.Drawing.Size(107, 15);
             this.labelIngredientName.TabIndex = 18;
@@ -238,7 +252,7 @@ namespace Kitchen
             // labelIngredientCount
             // 
             this.labelIngredientCount.AutoSize = true;
-            this.labelIngredientCount.Location = new System.Drawing.Point(978, 475);
+            this.labelIngredientCount.Location = new System.Drawing.Point(978, 536);
             this.labelIngredientCount.Name = "labelIngredientCount";
             this.labelIngredientCount.Size = new System.Drawing.Size(129, 15);
             this.labelIngredientCount.TabIndex = 20;
@@ -246,7 +260,7 @@ namespace Kitchen
             // 
             // tbIngredientCount
             // 
-            this.tbIngredientCount.Location = new System.Drawing.Point(978, 501);
+            this.tbIngredientCount.Location = new System.Drawing.Point(978, 562);
             this.tbIngredientCount.Name = "tbIngredientCount";
             this.tbIngredientCount.Size = new System.Drawing.Size(223, 23);
             this.tbIngredientCount.TabIndex = 19;
@@ -254,7 +268,7 @@ namespace Kitchen
             // labelChooseKitchen
             // 
             this.labelChooseKitchen.AutoSize = true;
-            this.labelChooseKitchen.Location = new System.Drawing.Point(608, 408);
+            this.labelChooseKitchen.Location = new System.Drawing.Point(608, 469);
             this.labelChooseKitchen.Name = "labelChooseKitchen";
             this.labelChooseKitchen.Size = new System.Drawing.Size(91, 15);
             this.labelChooseKitchen.TabIndex = 22;
@@ -264,7 +278,7 @@ namespace Kitchen
             // 
             this.cbDishKitchen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDishKitchen.FormattingEnabled = true;
-            this.cbDishKitchen.Location = new System.Drawing.Point(608, 435);
+            this.cbDishKitchen.Location = new System.Drawing.Point(608, 496);
             this.cbDishKitchen.Name = "cbDishKitchen";
             this.cbDishKitchen.Size = new System.Drawing.Size(149, 23);
             this.cbDishKitchen.TabIndex = 23;
@@ -273,7 +287,7 @@ namespace Kitchen
             // 
             this.cbDishCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDishCourse.FormattingEnabled = true;
-            this.cbDishCourse.Location = new System.Drawing.Point(608, 501);
+            this.cbDishCourse.Location = new System.Drawing.Point(608, 562);
             this.cbDishCourse.Name = "cbDishCourse";
             this.cbDishCourse.Size = new System.Drawing.Size(149, 23);
             this.cbDishCourse.TabIndex = 25;
@@ -281,7 +295,7 @@ namespace Kitchen
             // labelChooseCourse
             // 
             this.labelChooseCourse.AutoSize = true;
-            this.labelChooseCourse.Location = new System.Drawing.Point(608, 474);
+            this.labelChooseCourse.Location = new System.Drawing.Point(608, 535);
             this.labelChooseCourse.Name = "labelChooseCourse";
             this.labelChooseCourse.Size = new System.Drawing.Size(114, 15);
             this.labelChooseCourse.TabIndex = 24;
@@ -291,7 +305,7 @@ namespace Kitchen
             // 
             this.lbUsers.FormattingEnabled = true;
             this.lbUsers.ItemHeight = 15;
-            this.lbUsers.Location = new System.Drawing.Point(25, 96);
+            this.lbUsers.Location = new System.Drawing.Point(25, 157);
             this.lbUsers.Name = "lbUsers";
             this.lbUsers.Size = new System.Drawing.Size(168, 289);
             this.lbUsers.TabIndex = 26;
@@ -300,16 +314,17 @@ namespace Kitchen
             // labelUsers
             // 
             this.labelUsers.AutoSize = true;
-            this.labelUsers.Location = new System.Drawing.Point(25, 57);
+            this.labelUsers.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelUsers.Location = new System.Drawing.Point(25, 118);
             this.labelUsers.Name = "labelUsers";
-            this.labelUsers.Size = new System.Drawing.Size(52, 15);
+            this.labelUsers.Size = new System.Drawing.Size(79, 22);
             this.labelUsers.TabIndex = 27;
             this.labelUsers.Text = "Клієнти:";
             // 
             // labelChooseUser
             // 
             this.labelChooseUser.AutoSize = true;
-            this.labelChooseUser.Location = new System.Drawing.Point(25, 408);
+            this.labelChooseUser.Location = new System.Drawing.Point(25, 469);
             this.labelChooseUser.Name = "labelChooseUser";
             this.labelChooseUser.Size = new System.Drawing.Size(92, 15);
             this.labelChooseUser.TabIndex = 29;
@@ -317,7 +332,7 @@ namespace Kitchen
             // 
             // tbUserName
             // 
-            this.tbUserName.Location = new System.Drawing.Point(25, 435);
+            this.tbUserName.Location = new System.Drawing.Point(25, 496);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(168, 23);
             this.tbUserName.TabIndex = 28;
@@ -325,7 +340,7 @@ namespace Kitchen
             // checkBoxIsAdmin
             // 
             this.checkBoxIsAdmin.AutoSize = true;
-            this.checkBoxIsAdmin.Location = new System.Drawing.Point(26, 469);
+            this.checkBoxIsAdmin.Location = new System.Drawing.Point(26, 530);
             this.checkBoxIsAdmin.Name = "checkBoxIsAdmin";
             this.checkBoxIsAdmin.Size = new System.Drawing.Size(57, 19);
             this.checkBoxIsAdmin.TabIndex = 30;
@@ -334,17 +349,19 @@ namespace Kitchen
             // 
             // btnRemoveUser
             // 
-            this.btnRemoveUser.Location = new System.Drawing.Point(26, 591);
+            this.btnRemoveUser.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRemoveUser.Location = new System.Drawing.Point(26, 652);
             this.btnRemoveUser.Name = "btnRemoveUser";
             this.btnRemoveUser.Size = new System.Drawing.Size(167, 23);
             this.btnRemoveUser.TabIndex = 33;
             this.btnRemoveUser.Text = "Видалити";
-            this.btnRemoveUser.UseVisualStyleBackColor = true;
+            this.btnRemoveUser.UseVisualStyleBackColor = false;
             this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
             // 
             // btnEditUser
             // 
-            this.btnEditUser.Location = new System.Drawing.Point(26, 562);
+            this.btnEditUser.Location = new System.Drawing.Point(26, 623);
             this.btnEditUser.Name = "btnEditUser";
             this.btnEditUser.Size = new System.Drawing.Size(167, 23);
             this.btnEditUser.TabIndex = 32;
@@ -354,39 +371,45 @@ namespace Kitchen
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(26, 533);
+            this.btnAddUser.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddUser.Location = new System.Drawing.Point(26, 594);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(167, 23);
             this.btnAddUser.TabIndex = 31;
             this.btnAddUser.Text = "Додати";
-            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.UseVisualStyleBackColor = false;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnRemoveConnection
             // 
-            this.btnRemoveConnection.Location = new System.Drawing.Point(218, 562);
+            this.btnRemoveConnection.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoveConnection.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRemoveConnection.Location = new System.Drawing.Point(218, 638);
             this.btnRemoveConnection.Name = "btnRemoveConnection";
-            this.btnRemoveConnection.Size = new System.Drawing.Size(168, 23);
+            this.btnRemoveConnection.Size = new System.Drawing.Size(168, 37);
             this.btnRemoveConnection.TabIndex = 35;
             this.btnRemoveConnection.Text = "Вилучити з замовлення";
-            this.btnRemoveConnection.UseVisualStyleBackColor = true;
+            this.btnRemoveConnection.UseVisualStyleBackColor = false;
             this.btnRemoveConnection.Click += new System.EventHandler(this.btnRemoveConnection_Click);
             // 
             // btnAddConnection
             // 
-            this.btnAddConnection.Location = new System.Drawing.Point(218, 533);
+            this.btnAddConnection.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAddConnection.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddConnection.Location = new System.Drawing.Point(218, 594);
             this.btnAddConnection.Name = "btnAddConnection";
-            this.btnAddConnection.Size = new System.Drawing.Size(168, 23);
+            this.btnAddConnection.Size = new System.Drawing.Size(168, 38);
             this.btnAddConnection.TabIndex = 34;
             this.btnAddConnection.Text = "Замовити";
-            this.btnAddConnection.UseVisualStyleBackColor = true;
+            this.btnAddConnection.UseVisualStyleBackColor = false;
             this.btnAddConnection.Click += new System.EventHandler(this.btnAddConnection_Click);
             // 
             // lbUserDishes
             // 
             this.lbUserDishes.FormattingEnabled = true;
             this.lbUserDishes.ItemHeight = 15;
-            this.lbUserDishes.Location = new System.Drawing.Point(218, 96);
+            this.lbUserDishes.Location = new System.Drawing.Point(218, 157);
             this.lbUserDishes.Name = "lbUserDishes";
             this.lbUserDishes.Size = new System.Drawing.Size(168, 289);
             this.lbUserDishes.TabIndex = 39;
@@ -394,36 +417,40 @@ namespace Kitchen
             // labelUserDishes
             // 
             this.labelUserDishes.AutoSize = true;
-            this.labelUserDishes.Location = new System.Drawing.Point(218, 57);
+            this.labelUserDishes.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelUserDishes.Location = new System.Drawing.Point(218, 118);
             this.labelUserDishes.Name = "labelUserDishes";
-            this.labelUserDishes.Size = new System.Drawing.Size(89, 15);
+            this.labelUserDishes.Size = new System.Drawing.Size(131, 22);
             this.labelUserDishes.TabIndex = 38;
             this.labelUserDishes.Text = "Обрані страви:";
             // 
             // btnAllDishes
             // 
-            this.btnAllDishes.Location = new System.Drawing.Point(608, 229);
+            this.btnAllDishes.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAllDishes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAllDishes.Location = new System.Drawing.Point(608, 278);
             this.btnAllDishes.Name = "btnAllDishes";
             this.btnAllDishes.Size = new System.Drawing.Size(149, 23);
             this.btnAllDishes.TabIndex = 40;
             this.btnAllDishes.Text = "Усі страви";
-            this.btnAllDishes.UseVisualStyleBackColor = true;
+            this.btnAllDishes.UseVisualStyleBackColor = false;
             this.btnAllDishes.Click += new System.EventHandler(this.btnAllDishes_Click);
             // 
             // labelConnectedUser
             // 
             this.labelConnectedUser.AutoSize = true;
-            this.labelConnectedUser.Location = new System.Drawing.Point(412, 57);
+            this.labelConnectedUser.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelConnectedUser.Location = new System.Drawing.Point(403, 118);
             this.labelConnectedUser.Name = "labelConnectedUser";
-            this.labelConnectedUser.Size = new System.Drawing.Size(152, 15);
+            this.labelConnectedUser.Size = new System.Drawing.Size(168, 22);
             this.labelConnectedUser.TabIndex = 42;
-            this.labelConnectedUser.Text = "Прив\'язані до них клієнти:";
+            this.labelConnectedUser.Text = "Прив\'язані клієнти:";
             // 
             // lbConnectedUser
             // 
             this.lbConnectedUser.FormattingEnabled = true;
             this.lbConnectedUser.ItemHeight = 15;
-            this.lbConnectedUser.Location = new System.Drawing.Point(412, 96);
+            this.lbConnectedUser.Location = new System.Drawing.Point(412, 157);
             this.lbConnectedUser.Name = "lbConnectedUser";
             this.lbConnectedUser.Size = new System.Drawing.Size(168, 289);
             this.lbConnectedUser.TabIndex = 41;
@@ -431,7 +458,7 @@ namespace Kitchen
             // labelDishCost
             // 
             this.labelDishCost.AutoSize = true;
-            this.labelDishCost.Location = new System.Drawing.Point(783, 474);
+            this.labelDishCost.Location = new System.Drawing.Point(783, 535);
             this.labelDishCost.Name = "labelDishCost";
             this.labelDishCost.Size = new System.Drawing.Size(102, 15);
             this.labelDishCost.TabIndex = 46;
@@ -439,7 +466,7 @@ namespace Kitchen
             // 
             // tbDishCost
             // 
-            this.tbDishCost.Location = new System.Drawing.Point(783, 501);
+            this.tbDishCost.Location = new System.Drawing.Point(783, 562);
             this.tbDishCost.Name = "tbDishCost";
             this.tbDishCost.Size = new System.Drawing.Size(168, 23);
             this.tbDishCost.TabIndex = 45;
@@ -447,26 +474,50 @@ namespace Kitchen
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(218, 408);
+            this.labelTotal.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTotal.Location = new System.Drawing.Point(218, 469);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(57, 15);
+            this.labelTotal.Size = new System.Drawing.Size(117, 32);
             this.labelTotal.TabIndex = 48;
             this.labelTotal.Text = "Загалом:";
             // 
             // labelTotalCost
             // 
             this.labelTotalCost.AutoSize = true;
-            this.labelTotalCost.Location = new System.Drawing.Point(218, 443);
+            this.labelTotalCost.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTotalCost.Location = new System.Drawing.Point(218, 504);
             this.labelTotalCost.Name = "labelTotalCost";
-            this.labelTotalCost.Size = new System.Drawing.Size(35, 15);
+            this.labelTotalCost.Size = new System.Drawing.Size(99, 44);
             this.labelTotalCost.TabIndex = 49;
             this.labelTotalCost.Text = "0 грн";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(598, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 44);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Пошук по:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(207, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(385, 44);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Відображення зв\'язків:";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 643);
+            this.ClientSize = new System.Drawing.Size(1229, 730);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTotalCost);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.labelDishCost);
@@ -562,6 +613,8 @@ namespace Kitchen
         private System.Windows.Forms.TextBox tbDishCost;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label labelTotalCost;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
