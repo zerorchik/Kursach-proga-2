@@ -56,13 +56,15 @@ namespace Kitchen
             this.btnAddUser = new System.Windows.Forms.Button();
             this.btnRemoveConnection = new System.Windows.Forms.Button();
             this.btnAddConnection = new System.Windows.Forms.Button();
-            this.labelZamovlenya = new System.Windows.Forms.Label();
-            this.lbZamovlenya = new System.Windows.Forms.ListBox();
             this.lbUserDishes = new System.Windows.Forms.ListBox();
             this.labelUserDishes = new System.Windows.Forms.Label();
             this.btnAllDishes = new System.Windows.Forms.Button();
             this.labelConnectedUser = new System.Windows.Forms.Label();
             this.lbConnectedUser = new System.Windows.Forms.ListBox();
+            this.labelDishCost = new System.Windows.Forms.Label();
+            this.tbDishCost = new System.Windows.Forms.TextBox();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.labelTotalCost = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelDish
@@ -359,7 +361,7 @@ namespace Kitchen
             // 
             // btnRemoveConnection
             // 
-            this.btnRemoveConnection.Location = new System.Drawing.Point(218, 465);
+            this.btnRemoveConnection.Location = new System.Drawing.Point(218, 562);
             this.btnRemoveConnection.Name = "btnRemoveConnection";
             this.btnRemoveConnection.Size = new System.Drawing.Size(168, 23);
             this.btnRemoveConnection.TabIndex = 35;
@@ -369,31 +371,13 @@ namespace Kitchen
             // 
             // btnAddConnection
             // 
-            this.btnAddConnection.Location = new System.Drawing.Point(218, 436);
+            this.btnAddConnection.Location = new System.Drawing.Point(218, 533);
             this.btnAddConnection.Name = "btnAddConnection";
             this.btnAddConnection.Size = new System.Drawing.Size(168, 23);
             this.btnAddConnection.TabIndex = 34;
-            this.btnAddConnection.Text = "Додати до замовлення";
+            this.btnAddConnection.Text = "Замовити";
             this.btnAddConnection.UseVisualStyleBackColor = true;
             this.btnAddConnection.Click += new System.EventHandler(this.btnAddConnection_Click);
-            // 
-            // labelZamovlenya
-            // 
-            this.labelZamovlenya.AutoSize = true;
-            this.labelZamovlenya.Location = new System.Drawing.Point(1229, 57);
-            this.labelZamovlenya.Name = "labelZamovlenya";
-            this.labelZamovlenya.Size = new System.Drawing.Size(78, 15);
-            this.labelZamovlenya.TabIndex = 37;
-            this.labelZamovlenya.Text = "Замовлення:";
-            // 
-            // lbZamovlenya
-            // 
-            this.lbZamovlenya.FormattingEnabled = true;
-            this.lbZamovlenya.ItemHeight = 15;
-            this.lbZamovlenya.Location = new System.Drawing.Point(1229, 96);
-            this.lbZamovlenya.Name = "lbZamovlenya";
-            this.lbZamovlenya.Size = new System.Drawing.Size(360, 289);
-            this.lbZamovlenya.TabIndex = 36;
             // 
             // lbUserDishes
             // 
@@ -441,18 +425,54 @@ namespace Kitchen
             this.lbConnectedUser.Size = new System.Drawing.Size(168, 289);
             this.lbConnectedUser.TabIndex = 41;
             // 
+            // labelDishCost
+            // 
+            this.labelDishCost.AutoSize = true;
+            this.labelDishCost.Location = new System.Drawing.Point(783, 474);
+            this.labelDishCost.Name = "labelDishCost";
+            this.labelDishCost.Size = new System.Drawing.Size(102, 15);
+            this.labelDishCost.TabIndex = 46;
+            this.labelDishCost.Text = "Уведіть її вартість";
+            // 
+            // tbDishCost
+            // 
+            this.tbDishCost.Location = new System.Drawing.Point(783, 501);
+            this.tbDishCost.Name = "tbDishCost";
+            this.tbDishCost.Size = new System.Drawing.Size(168, 23);
+            this.tbDishCost.TabIndex = 45;
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Location = new System.Drawing.Point(218, 408);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(57, 15);
+            this.labelTotal.TabIndex = 48;
+            this.labelTotal.Text = "Загалом:";
+            // 
+            // labelTotalCost
+            // 
+            this.labelTotalCost.AutoSize = true;
+            this.labelTotalCost.Location = new System.Drawing.Point(218, 443);
+            this.labelTotalCost.Name = "labelTotalCost";
+            this.labelTotalCost.Size = new System.Drawing.Size(35, 15);
+            this.labelTotalCost.TabIndex = 49;
+            this.labelTotalCost.Text = "0 грн";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1618, 643);
+            this.ClientSize = new System.Drawing.Size(1229, 643);
+            this.Controls.Add(this.labelTotalCost);
+            this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.labelDishCost);
+            this.Controls.Add(this.tbDishCost);
             this.Controls.Add(this.labelConnectedUser);
             this.Controls.Add(this.lbConnectedUser);
             this.Controls.Add(this.btnAllDishes);
             this.Controls.Add(this.lbUserDishes);
             this.Controls.Add(this.labelUserDishes);
-            this.Controls.Add(this.labelZamovlenya);
-            this.Controls.Add(this.lbZamovlenya);
             this.Controls.Add(this.btnRemoveConnection);
             this.Controls.Add(this.btnAddConnection);
             this.Controls.Add(this.btnRemoveUser);
@@ -530,13 +550,15 @@ namespace Kitchen
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnRemoveConnection;
         private System.Windows.Forms.Button btnAddConnection;
-        private System.Windows.Forms.Label labelZamovlenya;
-        private System.Windows.Forms.ListBox lbZamovlenya;
         private System.Windows.Forms.ListBox lbUserDishes;
         private System.Windows.Forms.Label labelUserDishes;
         private System.Windows.Forms.Button btnAllDishes;
         private System.Windows.Forms.Label labelConnectedUser;
         private System.Windows.Forms.ListBox lbConnectedUser;
+        private System.Windows.Forms.Label labelDishCost;
+        private System.Windows.Forms.TextBox tbDishCost;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label labelTotalCost;
     }
 }
 

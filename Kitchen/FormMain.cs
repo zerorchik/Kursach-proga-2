@@ -29,7 +29,7 @@ namespace Kitchen
             var course4 = new CourseType() { Name = "Десерт" };
             var course5 = new CourseType() { Name = "Напій" };
 
-            var myDish1 = new Dish() { Name = "Борщ", KitchenType = kitchen1, CourseType = course1 };
+            var myDish1 = new Dish() { Name = "Борщ", KitchenType = kitchen1, CourseType = course1, Cost = 85 };
             var product1 = new Ingredient() { Name = "буряк", Count = "2 штуки", Dish = myDish1 };
             var product2 = new Ingredient() { Name = "морква", Count = "1 штука", Dish = myDish1 };
             var product3 = new Ingredient() { Name = "цибуля", Count = "3 штуки", Dish = myDish1 };
@@ -37,7 +37,7 @@ namespace Kitchen
             var product5 = new Ingredient() { Name = "соняшникова олія", Count = "4-5 ст. ложок", Dish = myDish1 };
             var product6 = new Ingredient() { Name = "лимонна кислота", Count = "дрібка", Dish = myDish1 };
 
-            var myDish2 = new Dish() { Name = "Рамен", KitchenType = kitchen2, CourseType = course2 };
+            var myDish2 = new Dish() { Name = "Рамен", KitchenType = kitchen2, CourseType = course2, Cost = 120 };
             var product7 = new Ingredient() { Name = "локшина", Count = "700 г", Dish = myDish2 };
             var product8 = new Ingredient() { Name = "свинина", Count = "1 кг", Dish = myDish2 };
             var product9 = new Ingredient() { Name = "жир", Count = "30 г", Dish = myDish2 };
@@ -45,7 +45,7 @@ namespace Kitchen
             var product11 = new Ingredient() { Name = "соєвий соус", Count = "200 г", Dish = myDish2 };
             var product12 = new Ingredient() { Name = "імбир", Count = "30 г", Dish = myDish2 };
 
-            var myDish3 = new Dish() { Name = "Вареники з картоплею", KitchenType = kitchen1, CourseType = course2 };
+            var myDish3 = new Dish() { Name = "Вареники з картоплею", KitchenType = kitchen1, CourseType = course2, Cost = 55 };
             var product13 = new Ingredient() { Name = "борошно", Count = "400 г", Dish = myDish3 };
             var product14 = new Ingredient() { Name = "вода", Count = "200 г", Dish = myDish3 };
             var product15 = new Ingredient() { Name = "олія", Count = "3 ст. ложки", Dish = myDish3 };
@@ -53,7 +53,7 @@ namespace Kitchen
             var product17 = new Ingredient() { Name = "картопля", Count = "800 г", Dish = myDish3 };
             var product18 = new Ingredient() { Name = "цибуля", Count = "1 шт", Dish = myDish3 };
 
-            var myDish4 = new Dish() { Name = "Цезар", KitchenType = kitchen3, CourseType = course3 };
+            var myDish4 = new Dish() { Name = "Цезар", KitchenType = kitchen3, CourseType = course3, Cost = 45 };
             var product19 = new Ingredient() { Name = "соус \"Цезар\"", Count = "100 мл", Dish = myDish4 };
             var product20 = new Ingredient() { Name = "помідор чері", Count = "100 г", Dish = myDish4 };
             var product21 = new Ingredient() { Name = "твердий пармезан", Count = "1 ч. ложка", Dish = myDish4 };
@@ -63,7 +63,7 @@ namespace Kitchen
             var product25 = new Ingredient() { Name = "обсмажена куряча грудка", Count = "половина", Dish = myDish4 };
             var product26 = new Ingredient() { Name = "грінки з фокачі", Count = "100 г", Dish = myDish4 };
 
-            var myDish5 = new Dish() { Name = "Кола", KitchenType = kitchen4, CourseType = course5 };
+            var myDish5 = new Dish() { Name = "Кола", KitchenType = kitchen4, CourseType = course5, Cost = 20 };
             var product27 = new Ingredient() { Name = "газована вода", Count = "1 л", Dish = myDish5 };
             var product28 = new Ingredient() { Name = "лимон", Count = "1 шт", Dish = myDish5 };
             var product29 = new Ingredient() { Name = "лайм", Count = "1 шт", Dish = myDish5 };
@@ -75,7 +75,7 @@ namespace Kitchen
             var product35 = new Ingredient() { Name = "коріандр в зернах", Count = "1 ч. ложка", Dish = myDish5 };
             var product36 = new Ingredient() { Name = "ванільна есенція", Count = "0.5 ч. ложки", Dish = myDish5 };
 
-            var myDish6 = new Dish() { Name = "Мотті", KitchenType = kitchen2, CourseType = course4 };
+            var myDish6 = new Dish() { Name = "Мотті", KitchenType = kitchen2, CourseType = course4, Cost = 35 };
             var product37 = new Ingredient() { Name = "цукрова пудра", Count = "100 г", Dish = myDish6 };
             var product38 = new Ingredient() { Name = "рисове борошно", Count = "50 г", Dish = myDish6 };
             var product39 = new Ingredient() { Name = "вода", Count = "150 мл", Dish = myDish6 };
@@ -104,6 +104,7 @@ namespace Kitchen
                 checkBoxIsAdmin.Checked = ((User)lbUsers.SelectedItem).IsAdmin ? true : false;
                 // Відображаємо страви користувача
                 RefreshConnectedDishes();
+                RefreshTotalCost();
             }
         }
 
@@ -115,6 +116,7 @@ namespace Kitchen
                 tbDishName.Text = ((Dish)lbDish.SelectedItem).Name;
                 cbDishKitchen.Text = ((Dish)lbDish.SelectedItem).KitchenType.Name;
                 cbDishCourse.Text = ((Dish)lbDish.SelectedItem).CourseType.Name;
+                tbDishCost.Text = ((Dish)lbDish.SelectedItem).Cost.ToString();
                 // Відображаємо інгридієнти страви
                 RefreshIngredients();
                 // Відображаємо клієнтів, що замовили страву
@@ -185,6 +187,7 @@ namespace Kitchen
             CourseType course;
             VarsForDish(out kitchen, out course);
             ((Dish)lbDish.SelectedItem).Name = tbDishName.Text;
+            ((Dish)lbDish.SelectedItem).Cost = Convert.ToInt32(tbDishCost.Text);
             ((Dish)lbDish.SelectedItem).KitchenType = kitchen;
             ((Dish)lbDish.SelectedItem).CourseType = course;
             RefreshDishes();
@@ -209,7 +212,7 @@ namespace Kitchen
             KitchenType kitchen;
             CourseType course;
             VarsForDish(out kitchen, out course);
-            new Dish() { Name = tbDishName.Text, KitchenType = kitchen, CourseType = course };
+            new Dish() { Name = tbDishName.Text, KitchenType = kitchen, CourseType = course, Cost = Convert.ToInt32(tbDishCost.Text) };
             RefreshDishes();
         }
 
@@ -237,6 +240,7 @@ namespace Kitchen
             new Connection() { User = (User)lbUsers.SelectedItem, Dish = (Dish)lbDish.SelectedItem };
             RefreshConnectedDishes();
             RefreshConnectedUsers();
+            RefreshTotalCost();
         }
 
         private void btnRemoveConnection_Click(object sender, EventArgs e)
@@ -248,6 +252,14 @@ namespace Kitchen
                 Connection.Items.Remove(connetionToDel.Id);
             RefreshConnectedDishes();
             RefreshConnectedUsers();
+            RefreshTotalCost();
+        }
+
+        private void RefreshTotalCost()
+        {
+            int cost = 0;
+            foreach (var dishes in lbUserDishes.Items) cost += dishes.GetHashCode();
+            labelTotalCost.Text = Convert.ToString(cost) + " грн";
         }
     }
 }

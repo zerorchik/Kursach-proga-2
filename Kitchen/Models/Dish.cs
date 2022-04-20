@@ -7,6 +7,7 @@ namespace Kitchen.Models
     public class Dish : Base<Dish>
     {
         public string Name { get; set; }
+        public int Cost { get; set; }
 
         // Словник інгридієнтів у страві
         public List<Ingredient> DishIngredients
@@ -46,7 +47,12 @@ namespace Kitchen.Models
 
         public override string ToString()
         {
-            return Name;
+            return Name + " - " + Cost;
+        }
+
+        public override int GetHashCode()
+        {
+            return Cost;
         }
 
         //// Конструктор класа
