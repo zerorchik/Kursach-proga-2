@@ -271,7 +271,6 @@ namespace Kitchen
             bool contains = false;
             if(lbDish.SelectedItem != null)
             {
-                //if (lbUserDishes.Items.Contains(lbDish.SelectedItem))
                 foreach (User user in User.Items.Values)
                     if (user.Dishes.Contains(lbDish.SelectedItem))
                     {
@@ -279,7 +278,7 @@ namespace Kitchen
                         contains = true;
                         break;
                     }
-                //MessageBox.Show("Ви не можете видалити страву, яка вже замовлена!");
+
                 if (!contains)
                 {
                     int count = lbIngredients.Items.Count;
