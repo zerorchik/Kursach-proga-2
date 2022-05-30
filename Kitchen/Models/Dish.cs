@@ -60,7 +60,7 @@ namespace Kitchen.Models
 
         public static bool DefineExpensive(Dish dishes)
         {
-            if (dishes.Cost > 100) return true;
+            if (dishes.Cost >= 100) return true;
             return false;
         }
 

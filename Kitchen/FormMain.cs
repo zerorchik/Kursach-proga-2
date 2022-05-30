@@ -356,9 +356,9 @@ namespace Kitchen
                 for (int ii, i = 0; i < count; i++)
                 {
                     if (count - i == 1) ii = 0;
-                    else if (i % 2 == 0) ii = i / 2 + 1;
+                    else if (i % 2 == 0) ii = i / 2;
                     else ii = i / 2;
-                        lbDish.Items.RemoveAt(ii);
+                    lbDish.Items.RemoveAt(ii);
                 }
             }
         }
